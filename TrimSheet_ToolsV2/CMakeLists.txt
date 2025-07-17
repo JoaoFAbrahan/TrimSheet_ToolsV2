@@ -12,27 +12,39 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 
+# Lista todos os arquivos .cpp, .h e .ui das pastas Views, Models, Controllers
+file(GLOB_RECURSE VIEW_FORMS          "${CMAKE_SOURCE_DIR}/Views/*.cpp" "${CMAKE_SOURCE_DIR}/Views/*.h" "${CMAKE_SOURCE_DIR}/Views/*.ui")
+file(GLOB_RECURSE VIEW_COMPONENTS     "${CMAKE_SOURCE_DIR}/Views/Components/*.cpp" "${CMAKE_SOURCE_DIR}/Views/Components/*.h" "${CMAKE_SOURCE_DIR}/Views/Components/*.ui")
+file(GLOB_RECURSE MODEL_SOURCES       "${CMAKE_SOURCE_DIR}/Models/*.cpp" "${CMAKE_SOURCE_DIR}/Models/*.h")
+file(GLOB_RECURSE CONTROLLER_SOURCES  "${CMAKE_SOURCE_DIR}/Controllers/*.cpp" "${CMAKE_SOURCE_DIR}/Controllers/*.h")
+
+# View Module
+set(VIEW_SOURCES
+    ${VIEW_FORMS}
+    ${VIEW_COMPONENTS}
+)
+
 # Arquivos de tradução
 set(TS_FILES Resources/Translations/TrimSheet_ToolsV2_en_US.ts)
 
+# Arquivo resource
+set(RESOURCE_FILES
+    Resources/resources.qrc
+    ${TS_FILES}
+)
+
 # Lista de fontes
 set(PROJECT_SOURCES
+    # Entry Point
     main.cpp
 
-    # Views
-    Views/WinMain.cpp
-    Views/WinMain.h
-    Views/WinMain.ui
+    # MVC Modules
+    ${VIEW_SOURCES}
+    ${MODEL_SOURCES}
+    ${CONTROLLER_SOURCES}
 
-    # Você pode adicionar mais arquivos aqui, exemplo:
-    # Models/MyModel.cpp
-    # Controllers/MyController.cpp
-
-    # Recursos (imagens, etc.)
-    Resources/qrc/resources.qrc
-
-    # Traduções
-    ${TS_FILES}
+    # Resource
+    ${RESOURCE_FILES}
 )
 
 # Criação do executável
@@ -40,6 +52,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(TrimSheet_ToolsV2
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        Views/ToogleStyle.h
+        Views/switch.h Views/switch.cpp
+
     )
 
     qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

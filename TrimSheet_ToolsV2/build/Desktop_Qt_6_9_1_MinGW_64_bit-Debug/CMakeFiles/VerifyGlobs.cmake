@@ -42,10 +42,8 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/*.cpp")
 set(OLD_GLOB
   "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/WinMain.cpp"
+  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/switch.cpp"
   "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp"
-  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/U2UXUZ4CID/qrc_resources.cpp"
-  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/UN6PRT6GRQ/moc_WinMain.cpp"
-  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp"
   "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -65,9 +63,9 @@ endif()
 # _directory_contents at C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/*.h")
 set(OLD_GLOB
+  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/ToogleStyle.h"
   "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/WinMain.h"
-  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/include/ui_WinMain.h"
-  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/moc_predefs.h"
+  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/switch.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -149,7 +147,7 @@ endif()
 # _directory_contents at C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/*.qrc")
 set(OLD_GLOB
-  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Resources/qrc/resources.qrc"
+  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Resources/resources.qrc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

@@ -9,6 +9,7 @@ class WinMain;
 }
 QT_END_NAMESPACE
 
+namespace View {
 class WinMain : public QMainWindow
 {
     Q_OBJECT
@@ -20,4 +21,5 @@ public:
 private:
     Ui::WinMain *ui;
 };
+}
 #endif // WINMAIN_H

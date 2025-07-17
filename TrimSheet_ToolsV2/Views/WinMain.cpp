@@ -1,6 +1,7 @@
 #include "WinMain.h"
 #include "./ui_WinMain.h"
 
+namespace View {
 WinMain::WinMain(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::WinMain)
@@ -11,4 +12,5 @@ WinMain::WinMain(QWidget *parent)
 WinMain::~WinMain()
 {
     delete ui;
+}
 }

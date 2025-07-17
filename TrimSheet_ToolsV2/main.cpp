@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
             break;
         }
     }
-    WinMain w;
+    View::WinMain w;
     w.show();
     return a.exec();
 }

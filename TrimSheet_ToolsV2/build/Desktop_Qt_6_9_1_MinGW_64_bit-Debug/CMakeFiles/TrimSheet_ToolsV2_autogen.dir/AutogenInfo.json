@@ -348,7 +348,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
 		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/Qt6Dependencies.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake",
-		"C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Resources/qrc/resources.qrc"
+		"C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Resources/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2",
 	"CROSS_CONFIG" : false,
@@ -357,9 +357,21 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/ToogleStyle.h",
+			"MU",
+			"UN6PRT6GRQ/moc_ToogleStyle.cpp",
+			null
+		],
+		[
 			"C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/WinMain.h",
 			"MU",
 			"UN6PRT6GRQ/moc_WinMain.cpp",
+			null
+		],
+		[
+			"C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/switch.h",
+			"MU",
+			"UN6PRT6GRQ/moc_switch.cpp",
 			null
 		]
 	],
@@ -436,6 +448,11 @@
 	[
 		[
 			"C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/WinMain.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/switch.cpp",
 			"MU",
 			null
 		],

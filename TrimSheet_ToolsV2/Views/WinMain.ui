@@ -6,39 +6,463 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1218</width>
+    <height>712</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>WinMain</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(15, 16, 17);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>230</y>
-      <width>80</width>
-      <height>24</height>
-     </rect>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="leftMargin">
+     <number>0</number>
     </property>
-    <property name="text">
-     <string>PushButton</string>
+    <property name="topMargin">
+     <number>0</number>
     </property>
-   </widget>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="MainMenu_Panel_Docked" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>50</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(27, 30, 32);</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="MainMenu_Panel_Undocked" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(27, 30, 32);</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="menu_Btn">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    /* Button Shape */
+    background-color: #1B1E20;
+    border-radius: 5px;
+
+    /* Font */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center; 
+    padding-right: 6px;
+    padding-left: 6px;
+
+    /* Icon */
+    qproperty-icon: url(:/Icons/Icons/Menu_Icon.png);
+    qproperty-iconSize: 30px 30px;
+}
+
+QPushButton:hover {
+    background-color: #24292B;
+}
+
+QPushButton:pressed {
+    background-color: #131517;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="trimSettings_Btn">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    /* Button Shape */
+    background-color: #1B1E20;
+    border-radius: 5px;
+
+    /* Font */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left; 
+    padding-right: 6px;
+    padding-left: 6px;
+
+    /* Icon */
+    qproperty-icon: url(:/Icons/Icons/TrimSettings_IconIdle.png);
+    qproperty-iconSize: 30px 30px;
+}
+
+QPushButton:hover {
+    background-color: #645AC8;
+}
+
+QPushButton:pressed {
+    background-color: #5441F6;
+}
+
+QPushButton:disabled {
+    background-color: #1B1E20;
+}</string>
+         </property>
+         <property name="text">
+          <string>  Trim Settings</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="uvPlanning_Btn">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    /* Shape Button */
+    background-color: #1B1E20;
+    border-radius: 5px;
+
+    /* Font Button */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 6px;
+    padding-left: 6px;
+
+    /* Icon Button */
+    qproperty-icon: url(:/Icons/Icons/UVPlanning_IconIdle.png);
+    qproperty-iconSize: 30px 30px;
+}
+
+QPushButton:hover {
+    background-color: #645AC8;
+}
+
+QPushButton:pressed {
+    background-color: #5441F6;
+}
+
+QPushButton:disabled {
+    background-color: #1B1E20;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>  UV Planning</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="helpInfo_Btn">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    /* Shape Button */
+    background-color: #1B1E20;
+    border-radius: 5px;
+
+    /* Font Button */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 6px;
+    padding-left: 6px;
+
+    /* Icon Button */
+    qproperty-icon: url(:/Icons/Icons/HelpInfo_IconIdle.png);
+    qproperty-iconSize: 30px 30px;
+}
+
+QPushButton:hover {
+    background-color: #645AC8;
+}
+
+QPushButton:pressed {
+    background-color: #5441F6;
+}
+
+QPushButton:disabled {
+    background-color: #1B1E20;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>  Help Inform</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="settings_Btn">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    /* Shape Button */
+    background-color: #1B1E20;
+    border-radius: 5px;
+
+    /* Font Button */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 6px;
+    padding-left: 6px;
+
+    /* Icon Button */
+    qproperty-icon: url(:/Icons/Icons/Settings_IconIdle.png);
+    qproperty-iconSize: 30px 30px;
+}
+
+QPushButton:hover {
+    background-color: #645AC8;
+}
+
+QPushButton:pressed {
+    background-color: #5441F6;
+}
+
+QPushButton:disabled {
+    background-color: #1B1E20;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>  Settings</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="about_Btn">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    /* Shape Button */
+    background-color: #1B1E20;
+    border-radius: 5px;
+
+    /* Font Button */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 6px;
+    padding-left: 6px;
+
+    /* Icon Button */
+    qproperty-icon: url(:/Icons/Icons/About_IconIdle.png);
+    qproperty-iconSize: 30px 30px;
+}
+
+QPushButton:hover {
+    background-color: #645AC8;
+}
+
+QPushButton:pressed {
+    background-color: #5441F6;
+}
+
+QPushButton:disabled {
+    background-color: #1B1E20;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>  About</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="alwaysOnTop_Chk">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox {
+    color: #f5f5f5; 
+    font-family: 'MollenNarrow_Regular';
+    font-size: 10pt;
+    text-align: left;
+    padding-left: 12px; 
+}</string>
+         </property>
+         <property name="text">
+          <string>   Always on Top</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Policy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="Form_Panel" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 0, 0);</string>
+         </property>
+         <widget class="QWidget" name="horizontalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>439</y>
+            <width>111</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
