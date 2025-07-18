@@ -10,74 +10,80 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools Core)
 
-# Lista todos os arquivos .cpp, .h e .ui das pastas Views, Models, Controllers
+# === Fontes MVC ===
 file(GLOB_RECURSE VIEW_FORMS          "${CMAKE_SOURCE_DIR}/Views/*.cpp" "${CMAKE_SOURCE_DIR}/Views/*.h" "${CMAKE_SOURCE_DIR}/Views/*.ui")
-file(GLOB_RECURSE VIEW_COMPONENTS     "${CMAKE_SOURCE_DIR}/Views/Components/*.cpp" "${CMAKE_SOURCE_DIR}/Views/Components/*.h" "${CMAKE_SOURCE_DIR}/Views/Components/*.ui")
 file(GLOB_RECURSE MODEL_SOURCES       "${CMAKE_SOURCE_DIR}/Models/*.cpp" "${CMAKE_SOURCE_DIR}/Models/*.h")
 file(GLOB_RECURSE CONTROLLER_SOURCES  "${CMAKE_SOURCE_DIR}/Controllers/*.cpp" "${CMAKE_SOURCE_DIR}/Controllers/*.h")
 
-# View Module
-set(VIEW_SOURCES
-    ${VIEW_FORMS}
-    ${VIEW_COMPONENTS}
-)
+set(VIEW_SOURCES ${VIEW_FORMS})
 
-# Arquivos de tradução
+# === Arquivos de tradução ===
 set(TS_FILES Resources/Translations/TrimSheet_ToolsV2_en_US.ts)
 
-# Arquivo resource
-set(RESOURCE_FILES
-    Resources/resources.qrc
-    ${TS_FILES}
-)
+# === Geração das traduções (.qm) ===
+qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 
-# Lista de fontes
+# === Arquivos do projeto ===
 set(PROJECT_SOURCES
-    # Entry Point
     main.cpp
-
-    # MVC Modules
     ${VIEW_SOURCES}
     ${MODEL_SOURCES}
     ${CONTROLLER_SOURCES}
-
-    # Resource
-    ${RESOURCE_FILES}
 )
 
-# Criação do executável
+# === Recursos (resources.qrc) ===
+qt_add_resources(GENERATED_RESOURCE_FILES
+    Resources/resources.qrc
+)
+
+# === Executável (Qt6 ou Qt5) ===
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(TrimSheet_ToolsV2
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        Views/ToogleStyle.h
-        Views/switch.h Views/switch.cpp
-
+        ${GENERATED_RESOURCE_FILES}
     )
-
-    qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+    qt_finalize_executable(TrimSheet_ToolsV2)
 else()
     if(ANDROID)
         add_library(TrimSheet_ToolsV2 SHARED
             ${PROJECT_SOURCES}
+            ${GENERATED_RESOURCE_FILES}
         )
     else()
         add_executable(TrimSheet_ToolsV2
             ${PROJECT_SOURCES}
+            ${GENERATED_RESOURCE_FILES}
         )
     endif()
-
     qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 endif()
 
-# Link com bibliotecas Qt
+# === Link com bibliotecas Qt ===
 target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt${QT_VERSION_MAJOR}::Core)
 
-# Configurações específicas para bundle (macOS, iOS, etc.)
+# === Includes ===
+file(GLOB_RECURSE VIEW_HEADER_PATHS "${CMAKE_SOURCE_DIR}/Views/*.h")
+file(GLOB_RECURSE CONTROLLER_HEADER_PATHS "${CMAKE_SOURCE_DIR}/Controllers/*.h")
+
+set(INCLUDE_DIRS "")
+foreach(HEADER ${VIEW_HEADER_PATHS} ${CONTROLLER_HEADER_PATHS})
+    get_filename_component(DIR ${HEADER} DIRECTORY)
+    list(APPEND INCLUDE_DIRS ${DIR})
+endforeach()
+list(REMOVE_DUPLICATES INCLUDE_DIRS)
+
+target_include_directories(TrimSheet_ToolsV2 PRIVATE
+    ${CMAKE_SOURCE_DIR}/Models
+    ${INCLUDE_DIRS}
+)
+
+# === Bundle config (macOS/iOS/Win32) ===
 if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.TrimSheet_ToolsV2)
+    set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.TrimSheet_ToolsV2)
 endif()
 
 set_target_properties(TrimSheet_ToolsV2 PROPERTIES
@@ -88,15 +94,10 @@ set_target_properties(TrimSheet_ToolsV2 PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-# Instalação
+# === Instalação ===
 include(GNUInstallDirs)
 install(TARGETS TrimSheet_ToolsV2
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
-
-# Finaliza (Qt 6)
-if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(TrimSheet_ToolsV2)
-endif()
