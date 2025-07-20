@@ -2,7 +2,8 @@
 #define WINMAIN_H
 
 #include <QMainWindow>
-#include <Components/CustomPushButton.h>
+#include <QButtonGroup>
+#include <CustomPushButton.h>
 
 using namespace View;
 
@@ -20,6 +21,8 @@ class WinMain : public QMainWindow
     // Class Variables
 private:
     QString menuButtonStyle = ":/Styles/Style_MainMenu_Button.qss"; // Set Menu Button Style
+    QButtonGroup *_buttonUndockedGroupList;
+    QButtonGroup *_buttonDockedGroupList;
 
     // Constructor
 public:
@@ -27,10 +30,16 @@ public:
     ~WinMain();
 
 
+    // Events
+private slots:
+    void on_menu_Btn_clicked();
+    void on_menu_Btn_2_clicked();
+
     // Methods
-private:    
+private:
     Ui::WinMain *ui;
     void SetButtonsStyle();
+    void LinkButtonState(CustomPushButton *a, CustomPushButton *b);
 };
 }
 #endif // WINMAIN_H

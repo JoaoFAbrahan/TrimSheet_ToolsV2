@@ -52,7 +52,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 43,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
@@ -76,13 +76,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 99,
+				"line" : 103,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 65,
+				"line" : 68,
 				"parent" : 0
 			},
 			{
@@ -278,7 +278,7 @@
 			{
 				"command" : 11,
 				"file" : 1,
-				"line" : 79,
+				"line" : 83,
 				"parent" : 0
 			}
 		]
@@ -398,8 +398,8 @@
 				0,
 				1,
 				2,
-				4,
-				7
+				5,
+				8
 			]
 		}
 	],
@@ -523,7 +523,7 @@
 				0,
 				1,
 				2,
-				4
+				5
 			]
 		},
 		{
@@ -531,43 +531,44 @@
 			"sourceIndexes" : 
 			[
 				3,
-				5,
-				8
+				4,
+				6,
+				9
 			]
 		},
 		{
 			"name" : "Forms",
 			"sourceIndexes" : 
 			[
-				6
+				7
 			]
 		},
 		{
 			"name" : "Source Files\\Generated",
 			"sourceIndexes" : 
 			[
-				7
+				8
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				9
+				10
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				10
+				11
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				11
+				12
 			]
 		}
 	],
@@ -595,6 +596,11 @@
 		{
 			"backtrace" : 4,
 			"path" : "Views/Components/CustomPushButton.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "Views/Components/PanelButtonGroup.h",
 			"sourceGroupIndex" : 1
 		},
 		{

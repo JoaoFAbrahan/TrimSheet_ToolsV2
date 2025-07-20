@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>WinMain</string>
+   <string>TrimSheet Tools</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(15, 16, 17);</string>
@@ -105,6 +105,12 @@ QPushButton:pressed {
          <property name="text">
           <string/>
          </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -151,6 +157,12 @@ QPushButton:disabled {
          <property name="text">
           <string/>
          </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -191,6 +203,9 @@ QPushButton:disabled {
          <property name="text">
           <string/>
          </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -230,6 +245,9 @@ QPushButton:disabled {
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -347,7 +365,7 @@ QPushButton:disabled {
     font-family: 'MollenNarrow_Regular';
     font-size: 10pt;
     text-align: center; 
-    padding-left: 10px; 
+    padding-left: 12px; 
 }</string>
          </property>
          <property name="text">
@@ -449,6 +467,9 @@ QPushButton:pressed {
          <property name="text">
           <string/>
          </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -460,6 +481,9 @@ QPushButton:pressed {
        </item>
        <item>
         <widget class="CustomPushButton" name="trimPlanning_Btn">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -500,6 +524,12 @@ QPushButton:disabled {
          </property>
          <property name="text">
           <string>  Trim Planning</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -547,6 +577,9 @@ QPushButton:disabled {
          <property name="text">
           <string>  UV Calculate</string>
          </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -592,6 +625,9 @@ QPushButton:disabled {
          </property>
          <property name="text">
           <string>  Help Inform</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -787,5 +823,198 @@ QPushButton:disabled {
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>trimPlanning_DockBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>trimPlanning_Btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>77</x>
+     <y>90</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>uvCalculate_DockBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>uvCalculate_Btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>136</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>80</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>helpInfo_DockBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>helpInfo_Btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>30</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>89</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>helpInfo_Btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>helpInfo_DockBtn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>uvCalculate_Btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>uvCalculate_DockBtn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>67</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>33</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>trimPlanning_Btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>trimPlanning_DockBtn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>67</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>settings_Btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>settings_DockBtn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>561</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>560</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>settings_DockBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>settings_Btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>575</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>577</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>about_Btn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>about_DockBtn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>605</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>606</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>about_DockBtn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>about_Btn</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>621</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>70</x>
+     <y>622</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>alwaysOnTop_Chk</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>alwaysOnTop_DockChk</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>72</x>
+     <y>648</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>26</x>
+     <y>653</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>alwaysOnTop_DockChk</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>alwaysOnTop_Chk</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>667</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>75</x>
+     <y>669</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

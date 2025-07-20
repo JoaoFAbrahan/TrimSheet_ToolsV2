@@ -1,3 +1,4 @@
+/* Idle Style State */
 QPushButton {
     /* Shape Button */
     background-color: #1B1E20;
@@ -25,5 +26,10 @@ QPushButton:pressed {
 }
 
 QPushButton:disabled {
+    color: #333333;
     background-color: #1B1E20;
+}
+
+QPushButton:checked {
+       background-color: #5441F6;
 }

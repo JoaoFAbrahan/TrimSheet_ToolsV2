@@ -45,6 +45,7 @@ set(OLD_GLOB
   "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/WinMain.cpp"
   "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/BZ23JXCEIE/moc_CustomPushButton.cpp"
+  "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/BZ23JXCEIE/moc_PanelButtonGroup.cpp"
   "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/UN6PRT6GRQ/moc_WinMain.cpp"
   "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp"
   "C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/qrc_resources.cpp"

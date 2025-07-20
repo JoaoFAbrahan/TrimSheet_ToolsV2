@@ -40,10 +40,13 @@ qt_add_resources(GENERATED_RESOURCE_FILES
 
 # === Executável (Qt6 ou Qt5) ===
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+    find_package(Qt6 REQUIRED COMPONENTS Core)
+
     qt_add_executable(TrimSheet_ToolsV2
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         ${GENERATED_RESOURCE_FILES}
+
     )
     qt_finalize_executable(TrimSheet_ToolsV2)
 else()
@@ -64,6 +67,7 @@ endif()
 # === Link com bibliotecas Qt ===
 target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt${QT_VERSION_MAJOR}::Core)
+target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt6::Core)
 
 # === Includes ===
 file(GLOB_RECURSE VIEW_HEADER_PATHS "${CMAKE_SOURCE_DIR}/Views/*.h")

@@ -1,7 +1,9 @@
-C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/UN6PRT6GRQ/moc_WinMain.cpp: C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/WinMain.h \
+C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/BZ23JXCEIE/moc_PanelButtonGroup.cpp: C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/Components/PanelButtonGroup.h \
   C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/moc_predefs.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/QEvent \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QFile \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/QVector \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q20iterator.h \
@@ -9,6 +11,7 @@ C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/bui
   C:/Qt/6.9.1/mingw_64/include/QtCore/q20type_traits.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q20utility.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q23utility.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/qabstracteventdispatcher.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qanystringview.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qarraydata.h \
@@ -18,6 +21,7 @@ C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/bui
   C:/Qt/6.9.1/mingw_64/include/QtCore/qatomic.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qbytearray.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -34,10 +38,14 @@ C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/bui
   C:/Qt/6.9.1/mingw_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qcontiguouscache.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qdebug.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/qelapsedtimer.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qendian.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/qeventloop.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qfile.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qfiledevice.h \
@@ -127,6 +135,7 @@ C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/bui
   C:/Qt/6.9.1/mingw_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qvarlengtharray.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/qvector.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h \
@@ -156,16 +165,11 @@ C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/bui
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h \
-  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QButtonGroup \
-  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QWidget \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractbutton.h \
-  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qbuttongroup.h \
-  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
