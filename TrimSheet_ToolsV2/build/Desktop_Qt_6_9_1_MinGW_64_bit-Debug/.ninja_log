@@ -1,102 +1,38 @@
 # ninja log v6
-5	107	7746694965045685	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-2985	3247	7745934238129732	qrc_resources.cpp	34daec588d58ed37
-108	372	7746694901245958	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-2985	3247	7745934238129732	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/qrc_resources.cpp	34daec588d58ed37
-108	372	7746694901245958	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-108	372	7746694901245958	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-108	372	7746694901245958	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-3457	5776	7745934240382126	CMakeFiles/TrimSheet_ToolsV2.dir/qrc_resources.cpp.obj	bf57e265a5cacc6c
-989	3946	7746068610726449	CMakeFiles/TrimSheet_ToolsV2.dir/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp.obj	7616309e7495a25b
-401	2577	7746662451516739	CMakeFiles/TrimSheet_ToolsV2.dir/Views/Components/CustomPushButton.cpp.obj	7d384f626c6f4103
-117	1931	7746694966169205	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	90b33dd0169a4e43
-1004	3881	7746068610875319	CMakeFiles/TrimSheet_ToolsV2.dir/main.cpp.obj	f45673e00fcc550
-1932	2242	7746694984317655	TrimSheet_ToolsV2.exe	57e8a75cda3f34b2
-272	331	7745934183875070	CMakeFiles/clean.additional	baedbe210acaa455
-331	359	7745934184472338	clean	577b940aee94fbd7
-152	1254	7746860049323981	build.ninja	78880e04dfe9ffc6
-320	3074	7746068867344121	CMakeFiles/TrimSheet_ToolsV2.dir/Views/Components/PanelButtonGroup.cpp.obj	11dc876b9c5f46f4
-15	259	7746866900149953	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-282	1533	7746866914288097	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-282	1533	7746866914288097	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-282	1533	7746866914288097	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-282	1533	7746866914288097	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-1534	1775	7746866917445002	qrc_resources.cpp	34daec588d58ed37
-1534	1775	7746866917445002	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/qrc_resources.cpp	34daec588d58ed37
-1868	2878	7746866918669344	CMakeFiles/TrimSheet_ToolsV2.dir/qrc_resources.cpp.obj	bf57e265a5cacc6c
-1805	4563	7746866918054768	CMakeFiles/TrimSheet_ToolsV2.dir/Views/Components/CustomPushButton.cpp.obj	7d384f626c6f4103
-1775	4594	7746866917749064	CMakeFiles/TrimSheet_ToolsV2.dir/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp.obj	7616309e7495a25b
-1793	4626	7746866917850185	CMakeFiles/TrimSheet_ToolsV2.dir/main.cpp.obj	f45673e00fcc550
-1840	4905	7746866918379856	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	90b33dd0169a4e43
-4905	5224	7746866948963343	TrimSheet_ToolsV2.exe	7755ca37ebbe91d9
-4	97	7746867639783202	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-7	149	7746870265971071	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-157	330	7746870267463334	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-157	330	7746870267463334	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-157	330	7746870267463334	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-157	330	7746870267463334	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-331	3259	7746870269209728	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	90b33dd0169a4e43
-3259	3616	7746870298490977	TrimSheet_ToolsV2.exe	7755ca37ebbe91d9
-4	94	7746870348283693	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-8	170	7746873774759324	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-182	1167	7746873785285058	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-182	1167	7746873785285058	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-182	1167	7746873785285058	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-182	1167	7746873785285058	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-1169	4465	7746873786367194	CMakeFiles/TrimSheet_ToolsV2.dir/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp.obj	7616309e7495a25b
-1182	4585	7746873786502610	CMakeFiles/TrimSheet_ToolsV2.dir/main.cpp.obj	f45673e00fcc550
-1195	4958	7746873786622228	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	90b33dd0169a4e43
-4958	5335	7746873824259878	TrimSheet_ToolsV2.exe	7755ca37ebbe91d9
-5	117	7746874080566883	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-5	112	7746874239883537	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-7	151	7746874468016234	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-163	393	7746874469577745	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-163	393	7746874469577745	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-163	393	7746874469577745	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-163	393	7746874469577745	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-395	3222	7746874471902098	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	90b33dd0169a4e43
-3222	3581	7746874500161825	TrimSheet_ToolsV2.exe	7755ca37ebbe91d9
-4	107	7746874597530999	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-5	98	7746874998227469	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-7	150	7746876207189866	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-160	1099	7746876217125763	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-160	1099	7746876217125763	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-160	1099	7746876217125763	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-160	1099	7746876217125763	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-1100	3779	7746876218117138	CMakeFiles/TrimSheet_ToolsV2.dir/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp.obj	7616309e7495a25b
-1119	3845	7746876218312551	CMakeFiles/TrimSheet_ToolsV2.dir/main.cpp.obj	f45673e00fcc550
-1133	4130	7746876218448211	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	90b33dd0169a4e43
-4130	4410	7746876248424712	TrimSheet_ToolsV2.exe	7755ca37ebbe91d9
-4	106	7746876270130547	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-5	113	7746877603151419	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-121	365	7746877604311906	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-121	365	7746877604311906	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-121	365	7746877604311906	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-121	365	7746877604311906	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-4	103	7746877648010015	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-111	2211	7746877649078202	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	90b33dd0169a4e43
-2211	2475	7746877670079981	TrimSheet_ToolsV2.exe	7755ca37ebbe91d9
-5	108	7746880756247625	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-115	346	7746880757338226	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-115	346	7746880757338226	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-115	346	7746880757338226	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-115	346	7746880757338226	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-347	2534	7746880759649301	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	90b33dd0169a4e43
-2534	2801	7746880781532558	TrimSheet_ToolsV2.exe	7755ca37ebbe91d9
-5	93	7746880885689588	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-5	120	7746881647211617	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-129	370	7746881648448053	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-129	370	7746881648448053	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-129	370	7746881648448053	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-129	370	7746881648448053	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-371	3190	7746881650871564	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	90b33dd0169a4e43
-3190	3447	7746881679061222	TrimSheet_ToolsV2.exe	7755ca37ebbe91d9
-5	106	7746881742625308	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-16	130	7746935049006692	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-138	399	7746935050218727	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-138	399	7746935050218727	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-138	399	7746935050218727	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
-138	399	7746935050218727	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
-5	104	7746935095977155	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
-112	3001	7746935097049906	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	90b33dd0169a4e43
-3001	3375	7746935125945574	TrimSheet_ToolsV2.exe	7755ca37ebbe91d9
+120	223	7750763112572893	qrc_resources.cpp	34daec588d58ed37
+15	221	7750797201636478	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
+234	501	7750797203818502	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
+120	223	7750763112572893	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/qrc_resources.cpp	34daec588d58ed37
+234	501	7750797203818502	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
+234	501	7750797203818502	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
+1898	7067	7749502042653100	CMakeFiles/TrimSheet_ToolsV2.dir/Views/Settings.cpp.obj	12d9fadca9372ade
+223	849	7750763112626046	CMakeFiles/TrimSheet_ToolsV2.dir/qrc_resources.cpp.obj	3e52fc16b5b14f5d
+234	501	7750797203818502	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
+467	2532	7750796786850764	CMakeFiles/TrimSheet_ToolsV2.dir/Views/Components/CustomPushButton.cpp.obj	b09d7a6bdff9b1a
+1365	5011	7750767455424766	CMakeFiles/TrimSheet_ToolsV2.dir/main.cpp.obj	68c7a5c3f31f1974
+401	2257	7750760809725522	CMakeFiles/TrimSheet_ToolsV2.dir/Controllers/StyleController.cpp.obj	beb1532461df23db
+1863	8052	7749502042299454	CMakeFiles/TrimSheet_ToolsV2.dir/Views/Components/ToggleSwitch.cpp.obj	182bc5d08a912b3b
+1351	5645	7750767455284580	CMakeFiles/TrimSheet_ToolsV2.dir/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp.obj	7c38d974147cda5
+502	3763	7750797206505792	CMakeFiles/TrimSheet_ToolsV2.dir/Views/WinMain.cpp.obj	ee276edb24560055
+3763	4181	7750797239111355	TrimSheet_ToolsV2.exe	cdbbcbd6977bf27
+102	961	7749502195531408	build.ninja	78880e04dfe9ffc6
+123	152	7749502010917489	CMakeFiles/clean.additional	baedbe210acaa455
+152	172	7749502011208304	clean	577b940aee94fbd7
+5	102	7750797298503288	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
+26	172	7750823212524380	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
+183	440	7750823214098138	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
+183	440	7750823214098138	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
+183	440	7750823214098138	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
+183	440	7750823214098138	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
+441	2481	7750823216683969	CMakeFiles/TrimSheet_ToolsV2.dir/main.cpp.obj	68c7a5c3f31f1974
+2481	3290	7750823237086617	TrimSheet_ToolsV2.exe	cdbbcbd6977bf27
+4	105	7750823303846996	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
+5	108	7750843031826285	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
+5	107	7750843194794267	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b
+115	301	7750843195903580	TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
+115	301	7750843195903580	TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
+115	301	7750843195903580	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/timestamp	2d6558cf6fd44cfa
+115	301	7750843195903580	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/mocs_compilation.cpp	2d6558cf6fd44cfa
+301	2556	7750843197765695	CMakeFiles/TrimSheet_ToolsV2.dir/Views/Components/CustomPushButton.cpp.obj	b09d7a6bdff9b1a
+2556	3096	7750843220267491	TrimSheet_ToolsV2.exe	cdbbcbd6977bf27
+5	100	7750843291809532	C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	60d99b73139ed34b

@@ -1,6 +1,7 @@
 #include "Views/WinMain.h"
 
 #include <QApplication>
+#include <QStyleFactory>
 #include <QLocale>
 #include <QTranslator>
 
@@ -18,6 +19,9 @@ int main(int argc, char *argv[])
             break;
         }
     }
+
+    QApplication::setStyle(QStyleFactory::create("Fusion"));
+
     View::WinMain w;
     w.show();
     return a.exec();

@@ -1,26 +1,42 @@
 <RCC>
 	<qresource prefix="/">
 		<file>Icons/Icon.ico</file>
-		<file>Icons/Menu_Icon.png</file>
-        <file>Icons/TrimSettings_IconIdle.png</file>
-		<file>Icons/TrimSettings_IconPressed.png</file>
-		<file>Icons/TrimSettings_IconDisable.png</file>
-		<file>Icons/UVPlanning_IconIdle.png</file>
-		<file>Icons/UVPlanning_IconPressed.png</file>
-		<file>Icons/UVPlanning_IconDisable.png</file>
-		<file>Icons/HelpInfo_IconIdle.png</file>
+		<file>Icons/DK_Menu_Icon.png</file>
+		<file>Icons/LG_Menu_Icon.png</file>
+        <file>Icons/DK_TrimPlanning_IconIdle.png</file>
+		<file>Icons/LG_TrimPlanning_IconIdle.png</file>
+		<file>Icons/TrimPlanning_IconPressed.png</file>
+		<file>Icons/DK_TrimPlanning_IconDisable.png</file>
+		<file>Icons/LG_TrimPlanning_IconDisable.png</file>
+		<file>Icons/DK_UVCalculate_IconIdle.png</file>
+		<file>Icons/LG_UVCalculate_IconIdle.png</file>
+		<file>Icons/UVCalculate_IconPressed.png</file>
+		<file>Icons/DK_UVCalculate_IconDisable.png</file>
+		<file>Icons/LG_UVCalculate_IconDisable.png</file>
+		<file>Icons/DK_HelpInfo_IconIdle.png</file>
+		<file>Icons/LG_HelpInfo_IconIdle.png</file>
 		<file>Icons/HelpInfo_IconPressed.png</file>
-		<file>Icons/HelpInfo_IconDisable.png</file>
-		<file>Icons/Settings_IconIdle.png</file>
+		<file>Icons/DK_HelpInfo_IconDisable.png</file>
+		<file>Icons/LG_HelpInfo_IconDisable.png</file>
+		<file>Icons/DK_Settings_IconIdle.png</file>
+		<file>Icons/LG_Settings_IconIdle.png</file>
 		<file>Icons/Settings_IconPressed.png</file>
-		<file>Icons/Settings_IconDisable.png</file>
-		<file>Icons/About_IconIdle.png</file>
+		<file>Icons/DK_Settings_IconDisable.png</file>
+		<file>Icons/LG_Settings_IconDisable.png</file>
+		<file>Icons/DK_About_IconIdle.png</file>
+		<file>Icons/LG_About_IconIdle.png</file>
 		<file>Icons/About_IconPressed.png</file>
-		<file>Icons/About_IconDisable.png</file>
+		<file>Icons/DK_About_IconDisable.png</file>
+		<file>Icons/LG_About_IconDisable.png</file>
 	</qresource>
 	
-    <qresource prefix="/">
-        <file>Styles/Style_MainMenu_Button.qss</file>
+    <qresource prefix="/">        
+		<file>Styles/Style_ContainerPanels.qss</file>
+		<file>Styles/Style_MainMenuPanel.qss</file>
+		<file>Styles/Style_MainMenu_Button.qss</file>
+		<file>Styles/Style_NormalMenu_Button.qss</file>
+		<file>Styles/Style_WindowBackground.qss</file>
+		<file>Styles/Style_MenuDockButton.qss</file>
     </qresource>
 	
 	<qresource prefix="/">

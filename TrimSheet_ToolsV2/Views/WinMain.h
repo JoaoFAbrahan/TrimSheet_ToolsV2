@@ -4,8 +4,11 @@
 #include <QMainWindow>
 #include <QButtonGroup>
 #include <CustomPushButton.h>
+#include <StyleController.h>
+#include <EStyleObjects.h>
 
 using namespace View;
+using namespace Controller;
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -20,9 +23,10 @@ class WinMain : public QMainWindow
 
     // Class Variables
 private:
-    QString menuButtonStyle = ":/Styles/Style_MainMenu_Button.qss"; // Set Menu Button Style
-    QButtonGroup *_buttonUndockedGroupList;
-    QButtonGroup *_buttonDockedGroupList;
+    StyleController _styleControllerComponent;
+    bool _isDarktheme = false;
+    QButtonGroup _buttonUndockedGroupList;
+    QButtonGroup _buttonDockedGroupList;
 
     // Constructor
 public:
@@ -35,11 +39,14 @@ private slots:
     void on_menu_Btn_clicked();
     void on_menu_Btn_2_clicked();
 
+
     // Methods
 private:
     Ui::WinMain *ui;
-    void SetButtonsStyle();
-    void LinkButtonState(CustomPushButton *a, CustomPushButton *b);
+    void SetStyleThemeSelected();
+    void SetMenuButtonIcons();
+    void SetMenuButtonsGroups();
+
 };
 }
 #endif // WINMAIN_H

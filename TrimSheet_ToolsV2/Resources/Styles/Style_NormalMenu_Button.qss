@@ -1,0 +1,65 @@
+/* Dark Theme */
+/* Idle Style State */
+QPushButton {
+    /* Shape Button */
+    background-color: #645ac8;
+    border-radius: 5px;
+
+    /* Font Button */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 6px;
+    padding-left: 6px;
+
+    /* Icon Button */
+    qproperty-iconSize: 30px 30px;
+}
+
+QPushButton:hover {
+    background-color: #69b5ff;
+}
+
+QPushButton:pressed {
+    background-color: #5441F6;
+}
+
+QPushButton:disabled {
+    color: #333333;
+    background-color: #f8f8f8;
+}
+=== Theme ===
+/* Light Theme */
+/* Idle Style State */
+QPushButton {
+    /* Shape Button */
+    background-color: #645ac8;
+    border-radius: 5px;
+
+    /* Font Button */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 6px;
+    padding-left: 6px;
+
+    /* Icon Button */
+    qproperty-iconSize: 30px 30px;
+}
+
+QPushButton:hover {
+    background-color: #69b5ff;
+}
+
+QPushButton:pressed {
+    background-color: #5441F6;
+}
+
+QPushButton:disabled {
+    color: #333333;
+    background-color: #f8f8f8;
+}

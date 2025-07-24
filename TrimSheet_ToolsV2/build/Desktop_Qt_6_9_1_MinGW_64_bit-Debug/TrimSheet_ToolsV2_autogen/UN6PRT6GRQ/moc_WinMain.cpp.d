@@ -2,6 +2,7 @@ C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/bui
   C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/TrimSheet_ToolsV2_autogen/moc_predefs.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QFile \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q20iterator.h \
@@ -411,4 +412,7 @@ C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/bui
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Controllers/Components/EStyleObjects.h \
+  C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Controllers/StyleController.h \
+  C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Models/SStyleComponents.h \
   C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/Views/Components/CustomPushButton.h

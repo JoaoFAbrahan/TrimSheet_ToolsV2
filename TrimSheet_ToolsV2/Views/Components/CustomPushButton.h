@@ -23,8 +23,7 @@ public:
 
     // Methods
 public:
-    void SetStyle(const QString &qssStyleBaseRef, bool useCheckable = false);
-    void SetStateIcons(QPixmap iconIdleRef, QPixmap iconPressedRef, QPixmap iconDisableRef, int sizeIcon = 24);
+    void SetStateIcons(QPixmap iconIdleRef, QPixmap iconHoverRef, QPixmap iconPressedRef, QPixmap iconDisableRef, int sizeIcon = 24);
 };
 }
 #endif // CUSTOMPUSHBUTTON_H

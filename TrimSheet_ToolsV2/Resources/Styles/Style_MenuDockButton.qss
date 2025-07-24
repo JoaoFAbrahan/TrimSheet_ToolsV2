@@ -1,0 +1,59 @@
+QPushButton {
+    /* Button Shape */
+    background-color: #1B1E20;
+    border-radius: 5px;
+
+    /* Font */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 6px;
+    padding-left: 6px;
+
+    /* Icon */
+    qproperty-iconSize: 30px 30px;
+}
+
+QPushButton:hover {
+    background-color: #24292B;
+}
+
+QPushButton:pressed {
+    background-color: #131517;
+}
+=== Theme ===
+QPushButton {
+    /* Button Shape */
+    background-color: #ffffff;
+    border-radius: 5px;
+
+    /* Font */
+    color: #1a1a1a;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 6px;
+    padding-left: 6px;
+
+    /* Icon */
+    qproperty-iconSize: 30px 30px;
+}
+
+QPushButton:hover {
+    /* Button Shape */
+    background-color: #e5e5e5;
+
+    /* Font */
+    color: #f5f5f5;
+}
+
+QPushButton:pressed {
+    /* Button Shape */
+    background-color: #d4d5d6;
+
+    /* Font */
+    color: #f5f5f5;
+}

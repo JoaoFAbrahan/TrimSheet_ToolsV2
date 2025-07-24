@@ -1,0 +1,9 @@
+/* Dark Theme */
+QWidget {
+    background-color: #1a1b1b;
+}
+=== Theme ===
+/* Light Theme */
+QWidget {
+    background-color: #f8f8f8;
+}
