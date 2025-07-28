@@ -8,7 +8,9 @@ enum EStyleObjects {
     ContainerPanel,
     MenuDockButton,
     MenuButton,
-    NormalButton
+    NormalButton,
+    TitleLabel,
+    NormalLabel
 };
 }
 #endif // ESTYLEOBJECTS_H

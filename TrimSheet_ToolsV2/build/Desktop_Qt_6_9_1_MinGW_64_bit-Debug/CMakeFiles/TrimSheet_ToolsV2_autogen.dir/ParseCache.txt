@@ -133,8 +133,10 @@ C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/View
  mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qvarlengtharray.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qversiontagging.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qxmlstream.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/QPainter
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qaction.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qbitmap.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h
@@ -148,19 +150,26 @@ C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/View
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qimage.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qkeysequence.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpaintdevice.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpalette.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpixelformat.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpixmap.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpolygon.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qregion.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qrgb.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qrgba64.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qtgui-config.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qtguiexports.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qtguiglobal.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtSvg/QSvgRenderer
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtSvg/qsvgrenderer.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtSvg/qtsvgexports.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtSvg/qtsvgglobal.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtWidgets/QPushButton
  mdp:C:/Qt/6.9.1/mingw_64/include/QtWidgets/QWidget
  mdp:C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractbutton.h
@@ -1348,8 +1357,10 @@ C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/View
  mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qvariant.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qvarlengtharray.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qversiontagging.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qxmlstream.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/QPainter
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qaction.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qbitmap.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h
@@ -1363,19 +1374,26 @@ C:/Users/joaof/Documents/Git Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/View
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qimage.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qkeysequence.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpaintdevice.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpalette.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpixelformat.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpixmap.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qpolygon.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qregion.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qrgb.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qrgba64.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qtgui-config.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qtguiexports.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qtguiglobal.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtSvg/QSvgRenderer
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtSvg/qsvgrenderer.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtSvg/qtsvgexports.h
+ mdp:C:/Qt/6.9.1/mingw_64/include/QtSvg/qtsvgglobal.h
  mdp:C:/Qt/6.9.1/mingw_64/include/QtWidgets/QButtonGroup
  mdp:C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow
  mdp:C:/Qt/6.9.1/mingw_64/include/QtWidgets/QPushButton

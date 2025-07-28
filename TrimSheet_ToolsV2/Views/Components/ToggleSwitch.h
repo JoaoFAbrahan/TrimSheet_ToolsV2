@@ -54,6 +54,7 @@ protected:
 
 signals:
     void checkStateChanged(bool checked);
+    void switchedOn();
 };
 }
 #endif // TOGGLESWITCH_H

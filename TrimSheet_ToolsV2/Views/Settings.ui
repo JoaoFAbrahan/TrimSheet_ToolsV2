@@ -6,40 +6,147 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>250</width>
+    <width>210</width>
     <height>250</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Settings</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
-   <property name="geometry">
-    <rect>
-     <x>45</x>
-     <y>200</y>
-     <width>151</width>
-     <height>32</height>
-    </rect>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #0f1011;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>15</number>
    </property>
-   <property name="orientation">
-    <enum>Qt::Orientation::Horizontal</enum>
+   <property name="leftMargin">
+    <number>20</number>
    </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+   <property name="topMargin">
+    <number>20</number>
    </property>
-  </widget>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>40</y>
-     <width>161</width>
-     <height>131</height>
-    </rect>
+   <property name="rightMargin">
+    <number>20</number>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout"/>
-  </widget>
+   <property name="bottomMargin">
+    <number>15</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="Theme_Label">
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    /* Font Button */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+}</string>
+         </property>
+         <property name="text">
+          <string>Theme:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="themeTitle_ComboBox"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="languageTitle_Label">
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    /* Font Button */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+    text-align: left;
+}</string>
+         </property>
+         <property name="text">
+          <string>Language:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="language_ComboBox"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    /* Shape Button */
+    background-color: #645ac8;
+
+    /* Font Button */
+    color: #f5f5f5;
+    font-family: 'MollenNarrow_Bold';
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #69b5ff;
+}
+
+QPushButton:pressed {
+    background-color: #5441F6;
+}
+
+QPushButton:disabled {
+    color: #333333;
+    background-color: #f8f8f8;
+}</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections>

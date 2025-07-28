@@ -41,6 +41,7 @@ qt_add_resources(GENERATED_RESOURCE_FILES
 # === Executável (Qt6 ou Qt5) ===
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     find_package(Qt6 REQUIRED COMPONENTS Widgets)
+find_package(Qt6 REQUIRED COMPONENTS Svg)
 
     qt_add_executable(TrimSheet_ToolsV2
         MANUAL_FINALIZATION
@@ -51,6 +52,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Controllers/StyleController.h Controllers/StyleController.cpp
         Resources/Styles/Style_MainMenuPanel.qss
         Resources/Styles/Style_MenuDockButton.qss
+        Resources/Styles/Style_TitleLabel.qss
     )
     qt_finalize_executable(TrimSheet_ToolsV2)
 else()
@@ -72,6 +74,7 @@ endif()
 target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt${QT_VERSION_MAJOR}::Core)
 target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt6::Widgets)
+target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt6::Svg)
 
 # === Includes ===
 file(GLOB_RECURSE VIEW_HEADER_PATHS "${CMAKE_SOURCE_DIR}/Views/*.h")

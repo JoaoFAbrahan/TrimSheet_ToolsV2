@@ -145,6 +145,10 @@ void ToggleSwitch::mouseReleaseEvent(QMouseEvent* event) {
         anim->setStartValue(_offset);
         anim->setEndValue(endOffset(isChecked()));
         anim->start(QAbstractAnimation::DeleteWhenStopped);
+
+        if(isChecked()) {
+            emit switchedOn();
+        }
     }
 
     emit checkStateChanged(isChecked());

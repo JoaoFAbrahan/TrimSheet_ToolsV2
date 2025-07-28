@@ -5,6 +5,8 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QFile>
+#include <QSvgRenderer>
+#include <QPainter>
 
 namespace View {
 class CustomPushButton : public QPushButton
@@ -23,7 +25,10 @@ public:
 
     // Methods
 public:
-    void SetStateIcons(QPixmap iconIdleRef, QPixmap iconHoverRef, QPixmap iconPressedRef, QPixmap iconDisableRef, int sizeIcon = 24);
+    void SetStateIcons(QString iconIdleRef, QString iconPressedRef, QColor colorIdle, QColor colorPressed, QColor colorDisable, int sizeIcon = 24);
+
+private:
+    QPixmap ColorizeSVG(QString iconPath, QColor iconColor, int iconSize);
 };
 }
 #endif // CUSTOMPUSHBUTTON_H

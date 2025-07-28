@@ -20,8 +20,6 @@ int main(int argc, char *argv[])
         }
     }
 
-    QApplication::setStyle(QStyleFactory::create("Fusion"));
-
     View::WinMain w;
     w.show();
     return a.exec();

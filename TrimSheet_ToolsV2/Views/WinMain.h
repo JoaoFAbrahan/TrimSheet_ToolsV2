@@ -23,10 +23,15 @@ class WinMain : public QMainWindow
 
     // Class Variables
 private:
+    // Style Theme and UI Components
     StyleController _styleControllerComponent;
     bool _isDarktheme = false;
     QButtonGroup _buttonUndockedGroupList;
     QButtonGroup _buttonDockedGroupList;
+
+    // Features
+
+
 
     // Constructor
 public:
@@ -38,6 +43,9 @@ public:
 private slots:
     void on_menu_Btn_clicked();
     void on_menu_Btn_2_clicked();
+    void on_settings_Btn_clicked();
+    void on_about_Btn_clicked();
+    void on_alwaysOnTop_Chk_toggled(bool checked);
 
 
     // Methods

@@ -32,7 +32,9 @@ void StyleController::LoadThemesFromQSS()
         _styles.ContainerPanels,
         _styles.MenuDockButton,
         _styles.MenuButtons,
-        _styles.Buttons
+        _styles.Buttons,
+        _styles.TitleLabel,
+        _styles.NormalLabel
     };
 
     for(const QString& filePath : files)

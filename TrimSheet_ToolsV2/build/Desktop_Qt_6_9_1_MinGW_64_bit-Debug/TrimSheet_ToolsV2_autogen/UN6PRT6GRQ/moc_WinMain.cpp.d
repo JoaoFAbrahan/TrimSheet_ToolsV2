@@ -129,8 +129,10 @@ C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/bui
   C:/Qt/6.9.1/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qversiontagging.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/qxmlstream.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/QPainter \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h \
@@ -144,19 +146,26 @@ C:/Users/joaof/Documents/Git\ Repository/TrimSheet_ToolsV2/TrimSheet_ToolsV2/bui
   C:/Qt/6.9.1/mingw_64/include/QtGui/qimage.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qpalette.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qpolygon.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qregion.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qrgba64.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.9.1/mingw_64/include/QtSvg/QSvgRenderer \
+  C:/Qt/6.9.1/mingw_64/include/QtSvg/qsvgrenderer.h \
+  C:/Qt/6.9.1/mingw_64/include/QtSvg/qtsvgexports.h \
+  C:/Qt/6.9.1/mingw_64/include/QtSvg/qtsvgglobal.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QButtonGroup \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QPushButton \

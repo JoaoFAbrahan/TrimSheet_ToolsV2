@@ -12,6 +12,8 @@ WinMain::WinMain(QWidget *parent)
     this->setWindowIcon(QIcon(":/Icons/Icon.ico"));
     ui->MainMenu_Panel_Undocked->setVisible(true);
     ui->MainMenu_Panel_Docked->setVisible(false);
+    connect(ui->alwaysOnTop_Chk, &View::ToggleSwitch::toggled, this, &View::WinMain::on_alwaysOnTop_Chk_toggled);
+    connect(ui->alwaysOnTop_DockChk, &View::ToggleSwitch::toggled, this, &View::WinMain::on_alwaysOnTop_Chk_toggled);
 
     // Set Style
     _styleControllerComponent.DarkThemeStatus(_isDarktheme);
@@ -47,10 +49,13 @@ void WinMain::SetStyleThemeSelected()
     _styleControllerComponent.ApplyStyle(ui->about_DockBtn, Controller::MenuButton);
 
     // Toggle Switch Button
-    ui->alwaysOnTop_Chk->SetColor(QColor("#5441F6"),QColor("#0f1011"),QColor("#ffffff"),QColor("#ffffff"));
-    ui->alwaysOnTop_DockChk->SetColor(QColor("#5441F6"),QColor("#0f1011"),QColor("#ffffff"),QColor("#ffffff"));
+    ui->alwaysOnTop_Chk->SetColor(QColor(84, 65, 246),QColor(15, 16, 17),QColor(245, 245, 245),QColor(245, 245, 245));
+    ui->alwaysOnTop_DockChk->SetColor(QColor(84, 65, 246),QColor(15, 16, 17),QColor(245, 245, 245),QColor(245, 245, 245));
     connect(ui->alwaysOnTop_Chk, &View::ToggleSwitch::toggled, ui->alwaysOnTop_DockChk, &View::ToggleSwitch::setChecked);
     connect(ui->alwaysOnTop_DockChk, &View::ToggleSwitch::toggled, ui->alwaysOnTop_Chk, &View::ToggleSwitch::setChecked);
+
+    // Set Label
+    _styleControllerComponent.ApplyStyle(ui->alwaysOnTop_Label, Controller::NormalLabel);
 
     // Menu Buttons Icons
     SetMenuButtonIcons();
@@ -63,97 +68,109 @@ void WinMain::SetMenuButtonIcons()
     {
         // Dock Button
         ui->menu_Btn->SetStateIcons(
-            QPixmap(":/Icons/DK_Menu_Icon.png"),
-            QPixmap(":/Icons/DK_Menu_Icon.png"),
-            QPixmap(":/Icons/DK_Menu_Icon.png"),
-            QPixmap(":/Icons/DK_Menu_Icon.png"),
+            ":/Icons/Menu_Icon.svg",
+            ":/Icons/Menu_Icon.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
         ui->menu_Btn_2->SetStateIcons(
-            QPixmap(":/Icons/DK_Menu_Icon.png"),
-            QPixmap(":/Icons/DK_Menu_Icon.png"),
-            QPixmap(":/Icons/DK_Menu_Icon.png"),
-            QPixmap(":/Icons/DK_Menu_Icon.png"),
+            ":/Icons/Menu_Icon.svg",
+            ":/Icons/Menu_Icon.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
 
         // TrimPlanning Btn
         ui->trimPlanning_Btn->SetStateIcons(
-            QPixmap(":/Icons/DK_TrimPlanning_IconIdle.png"),
-            QPixmap(":/Icons/TrimPlanning_IconPressed.png"),
-            QPixmap(":/Icons/TrimPlanning_IconPressed.png"),
-            QPixmap(":/Icons/DK_TrimPlanning_IconDisable.png"),
+            ":/Icons/TrimPlanning_Idle.svg",
+            ":/Icons/TrimPlanning_Pressed.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
         ui->trimPlanning_DockBtn->SetStateIcons(
-            QPixmap(":/Icons/DK_TrimPlanning_IconIdle.png"),
-            QPixmap(":/Icons/TrimPlanning_IconPressed.png"),
-            QPixmap(":/Icons/TrimPlanning_IconPressed.png"),
-            QPixmap(":/Icons/DK_TrimPlanning_IconDisable.png"),
+            ":/Icons/TrimPlanning_Idle.svg",
+            ":/Icons/TrimPlanning_Pressed.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
 
         // UV Calculate
         ui->uvCalculate_Btn->SetStateIcons(
-            QPixmap(":/Icons/DK_UVCalculate_IconIdle.png"),
-            QPixmap(":/Icons/UVCalculate_IconPressed.png"),
-            QPixmap(":/Icons/UVCalculate_IconPressed.png"),
-            QPixmap(":/Icons/DK_UVCalculate_IconDisable.png"),
+            ":/Icons/UVCalculate_Idle.svg",
+            ":/Icons/UVCalculate_Pressed.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
         ui->uvCalculate_DockBtn->SetStateIcons(
-            QPixmap(":/Icons/DK_UVCalculate_IconIdle.png"),
-            QPixmap(":/Icons/UVCalculate_IconPressed.png"),
-            QPixmap(":/Icons/UVCalculate_IconPressed.png"),
-            QPixmap(":/Icons/DK_UVCalculate_IconDisable.png"),
+            ":/Icons/UVCalculate_Idle.svg",
+            ":/Icons/UVCalculate_Pressed.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
 
         // HelpInform Btn
         ui->helpInfo_Btn->SetStateIcons(
-            QPixmap(":/Icons/DK_HelpInfo_IconIdle.png"),
-            QPixmap(":/Icons/HelpInfo_IconPressed.png"),
-            QPixmap(":/Icons/HelpInfo_IconPressed.png"),
-            QPixmap(":/Icons/DK_HelpInfo_IconDisable.png"),
+            ":/Icons/HelpInfo_Idle.svg",
+            ":/Icons/HelpInfo_Pressed.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
         ui->helpInfo_DockBtn->SetStateIcons(
-            QPixmap(":/Icons/DK_HelpInfo_IconIdle.png"),
-            QPixmap(":/Icons/HelpInfo_IconPressed.png"),
-            QPixmap(":/Icons/HelpInfo_IconPressed.png"),
-            QPixmap(":/Icons/DK_HelpInfo_IconDisable.png"),
+            ":/Icons/HelpInfo_Idle.svg",
+            ":/Icons/HelpInfo_Pressed.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
 
         // Settings Btn
         ui->settings_Btn->SetStateIcons(
-            QPixmap(":/Icons/DK_Settings_IconIdle.png"),
-            QPixmap(":/Icons/Settings_IconPressed.png"),
-            QPixmap(":/Icons/Settings_IconPressed.png"),
-            QPixmap(":/Icons/DK_Settings_IconDisable.png"),
+            ":/Icons/Settings_Idle.svg",
+            ":/Icons/Settings_Pressed.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
         ui->settings_DockBtn->SetStateIcons(
-            QPixmap(":/Icons/DK_Settings_IconIdle.png"),
-            QPixmap(":/Icons/Settings_IconPressed.png"),
-            QPixmap(":/Icons/Settings_IconPressed.png"),
-            QPixmap(":/Icons/DK_Settings_IconDisable.png"),
+            ":/Icons/Settings_Idle.svg",
+            ":/Icons/Settings_Pressed.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
 
         // About Btn
         ui->about_Btn->SetStateIcons(
-            QPixmap(":/Icons/DK_About_IconIdle.png"),
-            QPixmap(":/Icons/About_IconPressed.png"),
-            QPixmap(":/Icons/About_IconPressed.png"),
-            QPixmap(":/Icons/DK_About_IconDisable.png"),
+            ":/Icons/About_Idle.svg",
+            ":/Icons/About_Pressed.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
         ui->about_DockBtn->SetStateIcons(
-            QPixmap(":/Icons/DK_About_IconIdle.png"),
-            QPixmap(":/Icons/About_IconPressed.png"),
-            QPixmap(":/Icons/About_IconPressed.png"),
-            QPixmap(":/Icons/DK_About_IconDisable.png"),
+            ":/Icons/About_Idle.svg",
+            ":/Icons/About_Pressed.svg",
+            QColor(245, 245, 245),
+            QColor(245, 245, 245),
+            QColor(51, 51, 51),
             30
         );
     }
@@ -161,99 +178,111 @@ void WinMain::SetMenuButtonIcons()
     {
         // Dock Button
         ui->menu_Btn->SetStateIcons(
-            QPixmap(":/Icons/LG_Menu_Icon.png"),
-            QPixmap(":/Icons/LG_Menu_Icon.png"),
-            QPixmap(":/Icons/LG_Menu_Icon.png"),
-            QPixmap(":/Icons/LG_Menu_Icon.png"),
+            ":/Icons/Menu_Icon.svg",
+            ":/Icons/Menu_Icon.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
         ui->menu_Btn_2->SetStateIcons(
-            QPixmap(":/Icons/LG_Menu_Icon.png"),
-            QPixmap(":/Icons/LG_Menu_Icon.png"),
-            QPixmap(":/Icons/LG_Menu_Icon.png"),
-            QPixmap(":/Icons/LG_Menu_Icon.png"),
+            ":/Icons/Menu_Icon.svg",
+            ":/Icons/Menu_Icon.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
 
         // TrimPlanning Btn
         ui->trimPlanning_Btn->SetStateIcons(
-            QPixmap(":/Icons/LG_TrimPlanning_IconIdle.png"),
-            QPixmap(":/Icons/DK_TrimPlanning_IconIdle.png"),
-            QPixmap(":/Icons/TrimPlanning_IconPressed.png"),
-            QPixmap(":/Icons/LG_TrimPlanning_IconDisable.png"),
+            ":/Icons/TrimPlanning_Idle.svg",
+            ":/Icons/TrimPlanning_Pressed.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
         ui->trimPlanning_DockBtn->SetStateIcons(
-            QPixmap(":/Icons/LG_TrimPlanning_IconIdle.png"),
-            QPixmap(":/Icons/TrimPlanning_IconPressed.png"),
-            QPixmap(":/Icons/TrimPlanning_IconPressed.png"),
-            QPixmap(":/Icons/LG_TrimPlanning_IconDisable.png"),
+            ":/Icons/TrimPlanning_Idle.svg",
+            ":/Icons/TrimPlanning_Pressed.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
 
         // UV Calculate
         ui->uvCalculate_Btn->SetStateIcons(
-            QPixmap(":/Icons/LG_UVCalculate_IconIdle.png"),
-            QPixmap(":/Icons/UVCalculate_IconPressed.png"),
-            QPixmap(":/Icons/UVCalculate_IconPressed.png"),
-            QPixmap(":/Icons/LG_UVCalculate_IconDisable.png"),
+            ":/Icons/UVCalculate_Idle.svg",
+            ":/Icons/UVCalculate_Pressed.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
         ui->uvCalculate_DockBtn->SetStateIcons(
-            QPixmap(":/Icons/LG_UVCalculate_IconIdle.png"),
-            QPixmap(":/Icons/UVCalculate_IconPressed.png"),
-            QPixmap(":/Icons/UVCalculate_IconPressed.png"),
-            QPixmap(":/Icons/LG_UVCalculate_IconDisable.png"),
+            ":/Icons/UVCalculate_Idle.svg",
+            ":/Icons/UVCalculate_Pressed.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
 
         // HelpInform Btn
         ui->helpInfo_Btn->SetStateIcons(
-            QPixmap(":/Icons/LG_HelpInfo_IconIdle.png"),
-            QPixmap(":/Icons/HelpInfo_IconPressed.png"),
-            QPixmap(":/Icons/HelpInfo_IconPressed.png"),
-            QPixmap(":/Icons/LG_HelpInfo_IconDisable.png"),
+            ":/Icons/HelpInfo_Idle.svg",
+            ":/Icons/HelpInfo_Pressed.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
         ui->helpInfo_DockBtn->SetStateIcons(
-            QPixmap(":/Icons/LG_HelpInfo_IconIdle.png"),
-            QPixmap(":/Icons/HelpInfo_IconPressed.png"),
-            QPixmap(":/Icons/HelpInfo_IconPressed.png"),
-            QPixmap(":/Icons/LG_HelpInfo_IconDisable.png"),
+            ":/Icons/HelpInfo_Idle.svg",
+            ":/Icons/HelpInfo_Pressed.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
 
         // Settings Btn
         ui->settings_Btn->SetStateIcons(
-            QPixmap(":/Icons/LG_Settings_IconIdle.png"),
-            QPixmap(":/Icons/Settings_IconPressed.png"),
-            QPixmap(":/Icons/Settings_IconPressed.png"),
-            QPixmap(":/Icons/LG_Settings_IconDisable.png"),
+            ":/Icons/Settings_Idle.svg",
+            ":/Icons/Settings_Pressed.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
         ui->settings_DockBtn->SetStateIcons(
-            QPixmap(":/Icons/LG_Settings_IconIdle.png"),
-            QPixmap(":/Icons/Settings_IconPressed.png"),
-            QPixmap(":/Icons/Settings_IconPressed.png"),
-            QPixmap(":/Icons/LG_Settings_IconDisable.png"),
+            ":/Icons/Settings_Idle.svg",
+            ":/Icons/Settings_Pressed.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
 
         // About Btn
         ui->about_Btn->SetStateIcons(
-            QPixmap(":/Icons/LG_About_IconIdle.png"),
-            QPixmap(":/Icons/About_IconPressed.png"),
-            QPixmap(":/Icons/About_IconPressed.png"),
-            QPixmap(":/Icons/LG_About_IconDisable.png"),
+            ":/Icons/About_Idle.svg",
+            ":/Icons/About_Pressed.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
         ui->about_DockBtn->SetStateIcons(
-            QPixmap(":/Icons/LG_About_IconIdle.png"),
-            QPixmap(":/Icons/About_IconPressed.png"),
-            QPixmap(":/Icons/About_IconPressed.png"),
-            QPixmap(":/Icons/LG_About_IconDisable.png"),
+            ":/Icons/About_Idle.svg",
+            ":/Icons/About_Pressed.svg",
+            QColor(10, 20, 42),
+            QColor(245, 245, 245),
+            QColor(230, 230, 230),
             30
-            );
+        );
     }
 }
 
@@ -290,5 +319,23 @@ void WinMain::on_menu_Btn_2_clicked()
     ui->MainMenu_Panel_Docked->setVisible(false);
     ui->MainMenu_Panel_Undocked->setVisible(true);
 }
+
+void WinMain::on_settings_Btn_clicked()
+{
+
+}
+
+void WinMain::on_about_Btn_clicked()
+{
+
+}
+
+void WinMain::on_alwaysOnTop_Chk_toggled(bool checked)
+{
+    // Apply Aways on Top condition
+    setWindowFlag(Qt::WindowStaysOnTopHint, checked);
+    show();
+}
+
 
 }
