@@ -36,6 +36,7 @@ Makefile*
 target_wrapper.*
 
 # QtCreator
+/TrimSheet_ToolsV2/build/
 *.autosave
 
 # QtCreator Qml
