@@ -33,8 +33,12 @@ void StyleController::LoadThemesFromQSS()
         _styles.MenuDockButton,
         _styles.MenuButtons,
         _styles.Buttons,
+        _styles.ComboBox,
+        _styles.CheckBox,
+        _styles.TextBox,
         _styles.TitleLabel,
-        _styles.NormalLabel
+        _styles.NormalLabel,
+        _styles.DataGridView
     };
 
     for(const QString& filePath : files)

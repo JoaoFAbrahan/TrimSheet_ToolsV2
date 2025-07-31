@@ -1,23 +1,22 @@
-#ifndef SETTINGS_H
-#define SETTINGS_H
+#ifndef ABOUT_H
+#define ABOUT_H
 
 #include <QDialog>
 #include <StyleController.h>
 #include <EStyleObjects.h>
 #include <QTranslator>
 #include <IStartComponent.h>
-#include <QPushButton>
 
 using namespace Controller;
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class Settings;
+class About;
 }
 QT_END_NAMESPACE
 
 namespace View {
-class Settings : public QDialog, public IStartComponent
+class About : public QDialog, public IStartComponent
 {
     Q_OBJECT
 
@@ -29,20 +28,14 @@ private:
 
     // Constructor
 public:
-    explicit Settings(QWidget *parent = nullptr);
-    ~Settings();
+    explicit About(QWidget *parent = nullptr);
+    ~About();
     void Init();
-
-
-    // Events
-private slots:
-    void on_buttonBox_accepted();
-    void on_buttonBox_rejected();
 
 
     // Methods
 private:
-    Ui::Settings *ui;
+    Ui::About *ui;
 
 
     // IStartComponent interface
@@ -52,4 +45,4 @@ public:
     void StartLabels();
 };
 }
-#endif // SETTINGS_H
+#endif // ABOUT_H

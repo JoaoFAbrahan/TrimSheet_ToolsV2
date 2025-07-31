@@ -549,6 +549,9 @@ QPushButton:disabled {
     background-color: #1B1E20;
 }</string>
          </property>
+         <property name="locale">
+          <locale language="English" country="UnitedStates"/>
+         </property>
          <property name="text">
           <string>  Trim Planning</string>
          </property>
@@ -872,7 +875,7 @@ QPushButton:disabled {
        <item>
         <widget class="QWidget" name="widget" native="true">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 0, 0);</string>
+          <string notr="true">background-color: rgb(15, 16, 17);</string>
          </property>
         </widget>
        </item>
@@ -895,6 +898,20 @@ QPushButton:disabled {
    <container>1</container>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>menu_Btn</tabstop>
+  <tabstop>trimPlanning_Btn</tabstop>
+  <tabstop>uvCalculate_Btn</tabstop>
+  <tabstop>helpInfo_Btn</tabstop>
+  <tabstop>settings_Btn</tabstop>
+  <tabstop>about_Btn</tabstop>
+  <tabstop>menu_Btn_2</tabstop>
+  <tabstop>trimPlanning_DockBtn</tabstop>
+  <tabstop>uvCalculate_DockBtn</tabstop>
+  <tabstop>helpInfo_DockBtn</tabstop>
+  <tabstop>settings_DockBtn</tabstop>
+  <tabstop>about_DockBtn</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

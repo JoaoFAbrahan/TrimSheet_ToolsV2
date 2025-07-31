@@ -11,8 +11,12 @@ struct SStyleComponents {
     QString MenuDockButton = ":/Styles/Style_MenuDockButton.qss";
     QString MenuButtons = ":/Styles/Style_MainMenu_Button.qss";
     QString Buttons = ":/Styles/Style_NormalMenu_Button.qss";
+    QString ComboBox = ":/Styles/Style_ComboBox.qss";
+    QString CheckBox = ":/Styles/Style_CheckBox.qss";
+    QString TextBox = ":/Styles/Style_TextBox.qss";
     QString TitleLabel = ":/Styles/Style_TitleLabel.qss";
     QString NormalLabel = ":/Styles/Style_NormalLabel.qss";
+    QString DataGridView = ":/Styles/Style_DataGridView.qss";
 };
 }
 #endif // SSTYLECOMPONENTS_H

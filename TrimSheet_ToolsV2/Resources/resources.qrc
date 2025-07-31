@@ -1,6 +1,8 @@
 <RCC>
 	<qresource prefix="/">
 		<file>Icons/Icon.ico</file>
+		<file>Icons/Settings.ico</file>
+		<file>Icons/About.ico</file>
 		<file>Icons/Menu_Icon.svg</file>
 		<file>Icons/TrimPlanning_Idle.svg</file>
 		<file>Icons/TrimPlanning_Pressed.svg</file>
@@ -15,6 +17,8 @@
 		<file>Icons/Generated_Icon.svg</file>
 		<file>Icons/Import_Icon.svg</file>
 		<file>Icons/Save_Icon.svg</file>
+		<file>Icons/Arrow_Down.svg</file>
+		<file>Icons/Arrow_Up.svg</file>
 	</qresource>
 	
     <qresource prefix="/">        
@@ -26,6 +30,10 @@
 		<file>Styles/Style_MenuDockButton.qss</file>
 		<file>Styles/Style_TitleLabel.qss</file>
 		<file>Styles/Style_NormalLabel.qss</file>
+		<file>Styles/Style_ComboBox.qss</file>
+		<file>Styles/Style_CheckBox.qss</file>
+		<file>Styles/Style_TextBox.qss</file>
+		<file>Styles/Style_DataGridView.qss</file>
     </qresource>
 	
 	<qresource prefix="/">
@@ -36,4 +44,11 @@
 		<file>Fonts/MollenNarrow_Regular.ttf</file>
 		<file>Fonts/MollenNarrow_RegularItalic.ttf</file>
     </qresource>
+	    
+	<qresource prefix="/">
+		<file>Images/Logo_200x50.png</file>
+		<file>Images/Checker_5-12.png</file>
+		<file>Images/Checker_10-24.png</file>
+		<file>Images/Checker_20-48.png</file>
+	</qresource>
 </RCC>

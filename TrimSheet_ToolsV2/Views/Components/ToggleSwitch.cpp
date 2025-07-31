@@ -22,35 +22,26 @@ ToggleSwitch::ToggleSwitch(QWidget *parent, int trackRadius, int thumbRadius) : 
 
 void ToggleSwitch::SetColor(QColor trackColorON, QColor trackColorOFF, QColor thumbColorON, QColor thumbColorOFF)
 {
+    _trackColor[true] = trackColorON;
+    _trackColor[false] = trackColorOFF;
+
+    _thumbColor[true] = thumbColorON;
+    _thumbColor[false] = thumbColorOFF;
+
+    _textColor[true] = trackColorON;
+    _textColor[false] = trackColorOFF;
+
     if (_thumbRadius > _trackRadius) {
-        _trackColor[true] = trackColorON;
-        _trackColor[false] = trackColorOFF;
-
-        _thumbColor[true] = thumbColorON;
-        _thumbColor[false] = thumbColorOFF;
-
-        _textColor[true] = trackColorON;
-        _textColor[false] = trackColorOFF;
-
         _thumbText[true] = "";
         _thumbText[false] = "";
-
         _trackOpacity = 0.5;
     } else {
-        _trackColor[true] = trackColorON;
-        _trackColor[false] = trackColorOFF;
-
-        _thumbColor[true] = thumbColorON;
-        _thumbColor[false] = thumbColorOFF;
-
-        _textColor[true] = trackColorON;
-        _textColor[false] = trackColorOFF;
-
         _thumbText[true] = "✔";
         _thumbText[false] = "✕";
-
         _trackOpacity = 1.0;
     }
+
+    update();
 }
 
 QSize ToggleSwitch::sizeHint() const {

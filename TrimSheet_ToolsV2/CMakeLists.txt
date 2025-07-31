@@ -20,7 +20,11 @@ file(GLOB_RECURSE CONTROLLER_SOURCES  "${CMAKE_SOURCE_DIR}/Controllers/*.cpp" "$
 set(VIEW_SOURCES ${VIEW_FORMS})
 
 # === Arquivos de tradução ===
-set(TS_FILES Resources/Translations/TrimSheet_ToolsV2_en_US.ts)
+set(TS_FILES 
+	Resources/Translations/TrimSheet_ToolsV2_es_ES.ts
+    Resources/Translations/TrimSheet_ToolsV2_pt_BR.ts
+    Resources/Translations/TrimSheet_ToolsV2_zh_CN.ts
+)
 
 # === Geração das traduções (.qm) ===
 qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
@@ -53,6 +57,12 @@ find_package(Qt6 REQUIRED COMPONENTS Svg)
         Resources/Styles/Style_MainMenuPanel.qss
         Resources/Styles/Style_MenuDockButton.qss
         Resources/Styles/Style_TitleLabel.qss
+        Controllers/IStartComponent.h
+        Resources/Styles/Style_ComboBox.qss
+        Resources/Styles/Style_TextBox.qss
+        Resources/Styles/Style_CheckBox.qss
+        Resources/Styles/Style_DataGridView.qss
+        Views/About.h Views/About.cpp Views/About.ui
     )
     qt_finalize_executable(TrimSheet_ToolsV2)
 else()

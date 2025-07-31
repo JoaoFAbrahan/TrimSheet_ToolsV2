@@ -12,20 +12,64 @@ WinMain::WinMain(QWidget *parent)
     this->setWindowIcon(QIcon(":/Icons/Icon.ico"));
     ui->MainMenu_Panel_Undocked->setVisible(true);
     ui->MainMenu_Panel_Docked->setVisible(false);
+
+    // Connect Events
+    connect(ui->trimPlanning_DockBtn, &QPushButton::clicked, this, &WinMain::on_trimPlanning_Btn_clicked);
+    connect(ui->uvCalculate_DockBtn, &QPushButton::clicked, this, &WinMain::on_uvCalculate_Btn_clicked);
+    connect(ui->helpInfo_DockBtn, &QPushButton::clicked, this, &WinMain::on_helpInfo_Btn_clicked);
+    connect(ui->settings_DockBtn, &QPushButton::clicked, this, &WinMain::on_settings_Btn_clicked);
+    connect(ui->about_DockBtn, &QPushButton::clicked, this, &WinMain::on_about_Btn_clicked);
     connect(ui->alwaysOnTop_Chk, &View::ToggleSwitch::toggled, this, &View::WinMain::on_alwaysOnTop_Chk_toggled);
     connect(ui->alwaysOnTop_DockChk, &View::ToggleSwitch::toggled, this, &View::WinMain::on_alwaysOnTop_Chk_toggled);
-
-    // Set Style
-    _styleControllerComponent.DarkThemeStatus(_isDarktheme);
-    SetStyleThemeSelected();
-    SetMenuButtonsGroups();
 }
 
 WinMain::~WinMain()
 {   delete ui;  }
 
+void WinMain::Init()
+{
+    // Set Style
+    _styleControllerComponent.DarkThemeStatus(_isDarktheme);
+    StartLabels();
+    StartStyleTheme();
+    StartIcons();
+    SetMenuButtonsGroups();
+
+    this->update();
+    qApp->processEvents();
+
+    // Set Tab Order
+    setTabOrder(ui->menu_Btn, ui->trimPlanning_Btn);
+    setTabOrder(ui->trimPlanning_Btn, ui->uvCalculate_Btn);
+    setTabOrder(ui->uvCalculate_Btn, ui->helpInfo_Btn);
+    setTabOrder(ui->helpInfo_Btn, ui->settings_Btn);
+    setTabOrder(ui->settings_Btn, ui->about_Btn);
+    setTabOrder(ui->about_Btn, ui->alwaysOnTop_Chk);
+
+}
+
 // Methods
-void WinMain::SetStyleThemeSelected()
+void WinMain::SetMenuButtonsGroups()
+{
+    // Menu Button Group
+    _buttonUndockedGroupList.setExclusive(true);
+    _buttonDockedGroupList.setExclusive(true);
+
+    // Undocked
+    _buttonUndockedGroupList.addButton(ui->trimPlanning_Btn);
+    _buttonUndockedGroupList.addButton(ui->uvCalculate_Btn);
+    _buttonUndockedGroupList.addButton(ui->helpInfo_Btn);
+    _buttonUndockedGroupList.addButton(ui->settings_Btn);
+    _buttonUndockedGroupList.addButton(ui->about_Btn);
+
+    // Docked
+    _buttonDockedGroupList.addButton(ui->trimPlanning_DockBtn);
+    _buttonDockedGroupList.addButton(ui->uvCalculate_DockBtn);
+    _buttonDockedGroupList.addButton(ui->helpInfo_DockBtn);
+    _buttonDockedGroupList.addButton(ui->settings_DockBtn);
+    _buttonDockedGroupList.addButton(ui->about_DockBtn);
+}
+void WinMain::StartStyleTheme()
 {
     // Form
     _styleControllerComponent.ApplyStyle(this, Controller::WindowBackground);
@@ -56,12 +100,8 @@ void WinMain::SetStyleThemeSelected()
 
     // Set Label
     _styleControllerComponent.ApplyStyle(ui->alwaysOnTop_Label, Controller::NormalLabel);
-
-    // Menu Buttons Icons
-    SetMenuButtonIcons();
 }
-
-void WinMain::SetMenuButtonIcons()
+void WinMain::StartIcons()
 {
     // Menu Buttons Icons
     if(_isDarktheme)
@@ -74,7 +114,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
         ui->menu_Btn_2->SetStateIcons(
             ":/Icons/Menu_Icon.svg",
             ":/Icons/Menu_Icon.svg",
@@ -82,7 +122,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
 
         // TrimPlanning Btn
         ui->trimPlanning_Btn->SetStateIcons(
@@ -92,7 +132,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
         ui->trimPlanning_DockBtn->SetStateIcons(
             ":/Icons/TrimPlanning_Idle.svg",
             ":/Icons/TrimPlanning_Pressed.svg",
@@ -100,7 +140,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
 
         // UV Calculate
         ui->uvCalculate_Btn->SetStateIcons(
@@ -110,7 +150,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
         ui->uvCalculate_DockBtn->SetStateIcons(
             ":/Icons/UVCalculate_Idle.svg",
             ":/Icons/UVCalculate_Pressed.svg",
@@ -118,7 +158,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
 
         // HelpInform Btn
         ui->helpInfo_Btn->SetStateIcons(
@@ -128,7 +168,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
         ui->helpInfo_DockBtn->SetStateIcons(
             ":/Icons/HelpInfo_Idle.svg",
             ":/Icons/HelpInfo_Pressed.svg",
@@ -136,7 +176,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
 
         // Settings Btn
         ui->settings_Btn->SetStateIcons(
@@ -146,7 +186,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
         ui->settings_DockBtn->SetStateIcons(
             ":/Icons/Settings_Idle.svg",
             ":/Icons/Settings_Pressed.svg",
@@ -154,7 +194,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
 
         // About Btn
         ui->about_Btn->SetStateIcons(
@@ -164,7 +204,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
         ui->about_DockBtn->SetStateIcons(
             ":/Icons/About_Idle.svg",
             ":/Icons/About_Pressed.svg",
@@ -172,7 +212,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(51, 51, 51),
             30
-        );
+            );
     }
     else
     {
@@ -184,7 +224,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
         ui->menu_Btn_2->SetStateIcons(
             ":/Icons/Menu_Icon.svg",
             ":/Icons/Menu_Icon.svg",
@@ -192,7 +232,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
 
         // TrimPlanning Btn
         ui->trimPlanning_Btn->SetStateIcons(
@@ -202,7 +242,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
         ui->trimPlanning_DockBtn->SetStateIcons(
             ":/Icons/TrimPlanning_Idle.svg",
             ":/Icons/TrimPlanning_Pressed.svg",
@@ -210,7 +250,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
 
         // UV Calculate
         ui->uvCalculate_Btn->SetStateIcons(
@@ -220,7 +260,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
         ui->uvCalculate_DockBtn->SetStateIcons(
             ":/Icons/UVCalculate_Idle.svg",
             ":/Icons/UVCalculate_Pressed.svg",
@@ -228,7 +268,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
 
         // HelpInform Btn
         ui->helpInfo_Btn->SetStateIcons(
@@ -238,7 +278,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
         ui->helpInfo_DockBtn->SetStateIcons(
             ":/Icons/HelpInfo_Idle.svg",
             ":/Icons/HelpInfo_Pressed.svg",
@@ -246,7 +286,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
 
         // Settings Btn
         ui->settings_Btn->SetStateIcons(
@@ -256,7 +296,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
         ui->settings_DockBtn->SetStateIcons(
             ":/Icons/Settings_Idle.svg",
             ":/Icons/Settings_Pressed.svg",
@@ -264,7 +304,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
 
         // About Btn
         ui->about_Btn->SetStateIcons(
@@ -274,7 +314,7 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
         ui->about_DockBtn->SetStateIcons(
             ":/Icons/About_Idle.svg",
             ":/Icons/About_Pressed.svg",
@@ -282,32 +322,21 @@ void WinMain::SetMenuButtonIcons()
             QColor(245, 245, 245),
             QColor(230, 230, 230),
             30
-        );
+            );
     }
 }
-
-void WinMain::SetMenuButtonsGroups()
+void WinMain::StartLabels()
 {
-    // Menu Button Group
-    _buttonUndockedGroupList.setExclusive(true);
-    _buttonDockedGroupList.setExclusive(true);
-
-    // Undocked
-    _buttonUndockedGroupList.addButton(ui->trimPlanning_Btn);
-    _buttonUndockedGroupList.addButton(ui->uvCalculate_Btn);
-    _buttonUndockedGroupList.addButton(ui->helpInfo_Btn);
-    _buttonUndockedGroupList.addButton(ui->settings_Btn);
-    _buttonUndockedGroupList.addButton(ui->about_Btn);
-
-    // Docked
-    _buttonDockedGroupList.addButton(ui->trimPlanning_DockBtn);
-    _buttonDockedGroupList.addButton(ui->uvCalculate_DockBtn);
-    _buttonDockedGroupList.addButton(ui->helpInfo_DockBtn);
-    _buttonDockedGroupList.addButton(ui->settings_DockBtn);
-    _buttonDockedGroupList.addButton(ui->about_DockBtn);
+    ui->trimPlanning_Btn->setText("  " + tr("Trim Planning"));
+    ui->uvCalculate_Btn->setText("  " + tr("UV Calculate"));
+    ui->helpInfo_Btn->setText("  " + tr("Help Inform"));
+    ui->settings_Btn->setText("  " + tr("Settings"));
+    ui->about_Btn->setText("  " + tr("About"));
+    ui->alwaysOnTop_Label->setText("  " + tr("Always on Top"));
 }
 
-// Events Methods
+
+// Event Methods
 void WinMain::on_menu_Btn_clicked()
 {
     ui->MainMenu_Panel_Docked->setVisible(true);
@@ -320,14 +349,35 @@ void WinMain::on_menu_Btn_2_clicked()
     ui->MainMenu_Panel_Undocked->setVisible(true);
 }
 
-void WinMain::on_settings_Btn_clicked()
+void WinMain::on_trimPlanning_Btn_clicked()
 {
 
 }
 
-void WinMain::on_about_Btn_clicked()
+void WinMain::on_uvCalculate_Btn_clicked()
 {
 
+}
+
+void WinMain::on_helpInfo_Btn_clicked()
+{
+
+}
+
+void WinMain::on_settings_Btn_clicked()
+{
+    _settingsForm = new Settings(this);
+
+    _settingsForm->Init();
+    _settingsForm->exec();
+}
+
+void WinMain::on_about_Btn_clicked()
+{
+    _aboutForm = new About(this);
+
+    _aboutForm->Init();
+    _aboutForm->exec();
 }
 
 void WinMain::on_alwaysOnTop_Chk_toggled(bool checked)
@@ -336,6 +386,4 @@ void WinMain::on_alwaysOnTop_Chk_toggled(bool checked)
     setWindowFlag(Qt::WindowStaysOnTopHint, checked);
     show();
 }
-
-
 }

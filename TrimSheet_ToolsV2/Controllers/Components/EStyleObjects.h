@@ -9,8 +9,12 @@ enum EStyleObjects {
     MenuDockButton,
     MenuButton,
     NormalButton,
+    ComboBox,
+    CheckBox,
+    TextBox,
     TitleLabel,
-    NormalLabel
+    NormalLabel,
+    DataGridView
 };
 }
 #endif // ESTYLEOBJECTS_H
