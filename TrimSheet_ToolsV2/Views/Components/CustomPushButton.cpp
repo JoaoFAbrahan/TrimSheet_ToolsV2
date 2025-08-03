@@ -1,4 +1,5 @@
 #include "CustomPushButton.h"
+#include "pch.h"
 
 namespace View {
 CustomPushButton::CustomPushButton(QWidget *parent) : QPushButton(parent)

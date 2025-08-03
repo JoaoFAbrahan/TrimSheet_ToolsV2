@@ -1,5 +1,6 @@
 #include "About.h"
 #include "ui_About.h"
+#include "pch.h"
 
 namespace View {
 About::About(QWidget *parent)
@@ -19,7 +20,6 @@ About::~About()
 void About::Init()
 {
     // Set Style
-    _styleControllerComponent.DarkThemeStatus(true);
     StartLabels();
     StartStyleTheme();
     StartIcons();
@@ -31,18 +31,18 @@ void About::Init()
 void About::StartStyleTheme()
 {
     // Form
-    _styleControllerComponent.ApplyStyle(this, Controller::WindowBackground);
+    Controller::StyleController::Instance().ApplyStyle(this, Controller::WindowBackground);
 
     // Panel
-    _styleControllerComponent.ApplyStyle(ui->top_Panel, Controller::MainMenuPanel);
+    Controller::StyleController::Instance().ApplyStyle(ui->top_Panel, Controller::MainMenuPanel);
 
     // Labels
-    _styleControllerComponent.ApplyStyle(ui->softwareName_Label, Controller::TitleLabel);
-    _styleControllerComponent.ApplyStyle(ui->version_Label, Controller::NormalLabel);
-    _styleControllerComponent.ApplyStyle(ui->copyright_Label, Controller::TitleLabel);
-    _styleControllerComponent.ApplyStyle(ui->githubInfo_Label, Controller::NormalLabel);
-    _styleControllerComponent.ApplyStyle(ui->licensingInfo_Label, Controller::NormalLabel);
-    _styleControllerComponent.ApplyStyle(ui->softwareInfo_Label, Controller::NormalLabel);
+    Controller::StyleController::Instance().ApplyStyle(ui->softwareName_Label, Controller::TitleLabel);
+    Controller::StyleController::Instance().ApplyStyle(ui->version_Label, Controller::NormalLabel);
+    Controller::StyleController::Instance().ApplyStyle(ui->copyright_Label, Controller::TitleLabel);
+    Controller::StyleController::Instance().ApplyStyle(ui->githubInfo_Label, Controller::NormalLabel);
+    Controller::StyleController::Instance().ApplyStyle(ui->licensingInfo_Label, Controller::NormalLabel);
+    Controller::StyleController::Instance().ApplyStyle(ui->softwareInfo_Label, Controller::NormalLabel);
 }
 void About::StartIcons()
 {}
@@ -50,7 +50,7 @@ void About::StartLabels()
 {
     // Set Labels
     ui->copyright_Label->setText(tr("Copyright © 2025 João Felipe Abrahan. Licensed under GNU GPL v3.\nAll rights reserved under free software terms."));
-    ui->githubInfo_Label->setText(tr("For more information about TrimSheet Tools and its versions, please visit the github page:"));
+    ui->githubInfo_Label->setText(tr("For more information about TrimSheet Tools and its versions, please visit the GitHub page:"));
     ui->licensingInfo_Label->setText(tr("For licensing informations, please visit:"));
     ui->softwareInfo_Label->setText(tr("This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version."));
 }

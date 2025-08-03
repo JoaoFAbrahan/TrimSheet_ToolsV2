@@ -1,12 +1,10 @@
 #ifndef CUSTOMPUSHBUTTON_H
 #define CUSTOMPUSHBUTTON_H
 
-#include <QObject>
 #include <QWidget>
-#include <QPushButton>
-#include <QFile>
+#include <QString>
+#include <QColor>
 #include <QSvgRenderer>
-#include <QPainter>
 
 namespace View {
 class CustomPushButton : public QPushButton

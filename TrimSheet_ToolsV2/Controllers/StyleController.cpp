@@ -1,14 +1,29 @@
 #include "StyleController.h"
+#include "pch.h"
 
 namespace Controller {
+bool Controller::StyleController::_isDarkTheme = false;
+
+StyleController& StyleController::Instance()
+{
+    static StyleController instance;
+    return instance;
+}
+
 StyleController::StyleController()
 {
-    LoadThemesFromQSS();
+    //LoadThemesFromQSS();
 }
 
 void StyleController::DarkThemeStatus(bool status)
 {
     this->_isDarkTheme = status;
+    LoadThemesFromQSS();
+}
+
+bool StyleController::GetThemeStatus()
+{
+    return this->_isDarkTheme;
 }
 
 void StyleController::ApplyStyle(QWidget *objRef, EStyleObjects objTypeRef)
@@ -38,7 +53,7 @@ void StyleController::LoadThemesFromQSS()
         _styles.TextBox,
         _styles.TitleLabel,
         _styles.NormalLabel,
-        _styles.DataGridView
+        _styles.DataGridView,
     };
 
     for(const QString& filePath : files)

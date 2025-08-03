@@ -2,9 +2,9 @@
 #define ABOUT_H
 
 #include <QDialog>
+#include <QTranslator>
 #include <StyleController.h>
 #include <EStyleObjects.h>
-#include <QTranslator>
 #include <IStartComponent.h>
 
 using namespace Controller;
@@ -23,7 +23,6 @@ class About : public QDialog, public IStartComponent
     // Class Variables
 private:
     // Style Theme and UI Components
-    StyleController _styleControllerComponent;
 
 
     // Constructor

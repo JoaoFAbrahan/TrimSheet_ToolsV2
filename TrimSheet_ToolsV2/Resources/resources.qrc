@@ -43,6 +43,9 @@
 		<file>Fonts/MollenNarrow_LightItalic.ttf</file>
 		<file>Fonts/MollenNarrow_Regular.ttf</file>
 		<file>Fonts/MollenNarrow_RegularItalic.ttf</file>
+		<file>Fonts/NotoSansSC_Bold.ttf</file>
+		<file>Fonts/NotoSansSC_Light.ttf</file>
+		<file>Fonts/NotoSansSC_Regular.ttf</file>
     </qresource>
 	    
 	<qresource prefix="/">
@@ -50,5 +53,11 @@
 		<file>Images/Checker_5-12.png</file>
 		<file>Images/Checker_10-24.png</file>
 		<file>Images/Checker_20-48.png</file>
+	</qresource>
+	
+	<qresource prefix="/">
+		<file>Translations/TrimSheet_ToolsV2_es_ES.qm</file>
+		<file>Translations/TrimSheet_ToolsV2_pt_BR.qm</file>
+		<file>Translations/TrimSheet_ToolsV2_zh_CN.qm</file>
 	</qresource>
 </RCC>

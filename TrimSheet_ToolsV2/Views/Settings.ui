@@ -29,7 +29,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Settings</string>
+   <string notr="true">Settings</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
@@ -75,7 +75,7 @@
 }</string>
          </property>
          <property name="text">
-          <string>Theme:</string>
+          <string notr="true">Theme:</string>
          </property>
         </widget>
        </item>
@@ -86,6 +86,24 @@
            <width>0</width>
            <height>22</height>
           </size>
+         </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="statusTip">
+          <string notr="true"/>
+         </property>
+         <property name="whatsThis">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleName">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleDescription">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleIdentifier">
+          <string notr="true"/>
          </property>
          <property name="styleSheet">
           <string notr="true">/* Base Shape */
@@ -164,7 +182,7 @@ QComboBox QAbstractItemView::item::selected {
 }</string>
          </property>
          <property name="text">
-          <string>Language:</string>
+          <string notr="true">Language:</string>
          </property>
         </widget>
        </item>
@@ -175,6 +193,24 @@ QComboBox QAbstractItemView::item::selected {
            <width>0</width>
            <height>22</height>
           </size>
+         </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="statusTip">
+          <string notr="true"/>
+         </property>
+         <property name="whatsThis">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleName">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleDescription">
+          <string notr="true"/>
+         </property>
+         <property name="accessibleIdentifier">
+          <string notr="true"/>
          </property>
          <property name="styleSheet">
           <string notr="true">/* Base Shape */

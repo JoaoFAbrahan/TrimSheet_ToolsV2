@@ -1,12 +1,13 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
+#include <QWidget>
 #include <QDialog>
+#include <QMessageBox>
+#include <QTranslator>
 #include <StyleController.h>
 #include <EStyleObjects.h>
-#include <QTranslator>
 #include <IStartComponent.h>
-#include <QPushButton>
 
 using namespace Controller;
 
@@ -24,7 +25,6 @@ class Settings : public QDialog, public IStartComponent
     // Class Variables
 private:
     // Style Theme and UI Components
-    StyleController _styleControllerComponent;
 
 
     // Constructor
@@ -43,6 +43,8 @@ private slots:
     // Methods
 private:
     Ui::Settings *ui;
+    void applySettings();
+    void SetMessageBoxStyle(QMessageBox *msgBoxRef);
 
 
     // IStartComponent interface

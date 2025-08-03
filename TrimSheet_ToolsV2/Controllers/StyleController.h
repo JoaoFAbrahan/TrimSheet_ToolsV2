@@ -2,7 +2,8 @@
 #define STYLECONTROLLER_H
 
 #include <QWidget>
-#include <QFile>
+#include <QVector>
+#include <QString>
 #include <SStyleComponents.h>
 #include <EStyleObjects.h>
 
@@ -13,19 +14,26 @@ class StyleController
 {
     // Class variables
 private:
+    static bool _isDarkTheme;
     QVector<QString> _darkThemes;
     QVector<QString> _lightThemes;
     SStyleComponents _styles;
-    bool _isDarkTheme;
 
-    // Constructor
+
+    // Singleton Pattern
+private:
+    StyleController(); // Construtor privado
+    StyleController(const StyleController&) = delete;            // Impede cópia
+    StyleController& operator=(const StyleController&) = delete;
+
 public:
-    StyleController();
+    static StyleController& Instance(); // Acesso ao Singleton
 
 
     // Methods
 public:
     void DarkThemeStatus(bool status);
+    bool GetThemeStatus();
     void ApplyStyle(QWidget *objRef, EStyleObjects objTypeRef);
 
 private:

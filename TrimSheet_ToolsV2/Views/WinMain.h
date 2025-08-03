@@ -2,11 +2,11 @@
 #define WINMAIN_H
 
 #include <QMainWindow>
+#include <QTranslator>
 #include <QButtonGroup>
 #include <CustomPushButton.h>
 #include <StyleController.h>
 #include <EStyleObjects.h>
-#include <QTranslator>
 #include <IStartComponent.h>
 
 #include <Settings.h>
@@ -29,8 +29,6 @@ class WinMain : public QMainWindow, public IStartComponent
     // Class Variables
 private:
     // Style Theme and UI Components
-    StyleController _styleControllerComponent;
-    bool _isDarktheme = true;
     QButtonGroup _buttonUndockedGroupList;
     QButtonGroup _buttonDockedGroupList;
 

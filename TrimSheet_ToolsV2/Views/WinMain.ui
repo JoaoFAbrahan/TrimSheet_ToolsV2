@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string notr="true">                    TrimSheet Tools</string>
+   <string notr="true">TrimSheet Tools</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(15, 16, 17);</string>
@@ -161,7 +161,7 @@ QPushButton:disabled {
 }</string>
          </property>
          <property name="text">
-          <string/>
+          <string notr="true"/>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -173,6 +173,9 @@ QPushButton:disabled {
        </item>
        <item>
         <widget class="CustomPushButton" name="uvCalculate_DockBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -207,7 +210,7 @@ QPushButton:disabled {
 </string>
          </property>
          <property name="text">
-          <string/>
+          <string notr="true"/>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -216,6 +219,9 @@ QPushButton:disabled {
        </item>
        <item>
         <widget class="CustomPushButton" name="helpInfo_DockBtn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -250,7 +256,7 @@ QPushButton:disabled {
 </string>
          </property>
          <property name="text">
-          <string/>
+          <string notr="true"/>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -313,7 +319,7 @@ QPushButton:disabled {
 </string>
          </property>
          <property name="text">
-          <string/>
+          <string notr="true"/>
          </property>
         </widget>
        </item>
@@ -353,7 +359,7 @@ QPushButton:disabled {
 </string>
          </property>
          <property name="text">
-          <string/>
+          <string notr="true"/>
          </property>
         </widget>
        </item>
@@ -553,7 +559,7 @@ QPushButton:disabled {
           <locale language="English" country="UnitedStates"/>
          </property>
          <property name="text">
-          <string>  Trim Planning</string>
+          <string notr="true">  Trim Planning</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -566,7 +572,7 @@ QPushButton:disabled {
        <item>
         <widget class="CustomPushButton" name="uvCalculate_Btn">
          <property name="enabled">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="minimumSize">
           <size>
@@ -608,7 +614,7 @@ QPushButton:disabled {
 </string>
          </property>
          <property name="text">
-          <string>  UV Calculate</string>
+          <string notr="true">  UV Calculate</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -617,6 +623,9 @@ QPushButton:disabled {
        </item>
        <item>
         <widget class="CustomPushButton" name="helpInfo_Btn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -657,7 +666,7 @@ QPushButton:disabled {
 </string>
          </property>
          <property name="text">
-          <string>  Help Inform</string>
+          <string notr="true">  Help Inform</string>
          </property>
          <property name="checkable">
           <bool>true</bool>
@@ -726,7 +735,7 @@ QPushButton:disabled {
 </string>
          </property>
          <property name="text">
-          <string>  Settings</string>
+          <string notr="true">  Settings</string>
          </property>
         </widget>
        </item>
@@ -772,7 +781,7 @@ QPushButton:disabled {
 </string>
          </property>
          <property name="text">
-          <string>  About</string>
+          <string notr="true">  About</string>
          </property>
         </widget>
        </item>
@@ -828,7 +837,7 @@ QPushButton:disabled {
 }</string>
             </property>
             <property name="text">
-             <string>  Always on Top</string>
+             <string notr="true">  Always on Top</string>
             </property>
            </widget>
           </item>

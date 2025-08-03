@@ -24,10 +24,11 @@ set(TS_FILES
 	Resources/Translations/TrimSheet_ToolsV2_es_ES.ts
     Resources/Translations/TrimSheet_ToolsV2_pt_BR.ts
     Resources/Translations/TrimSheet_ToolsV2_zh_CN.ts
+    Resources/Translations/TrimSheet_ToolsV2_pt_BR.ts
 )
 
 # === Geração das traduções (.qm) ===
-qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+qt_add_translation(QM_FILES ${TS_FILES})
 
 # === Arquivos do projeto ===
 set(PROJECT_SOURCES
@@ -42,6 +43,7 @@ qt_add_resources(GENERATED_RESOURCE_FILES
     Resources/resources.qrc
 )
 
+
 # === Executável (Qt6 ou Qt5) ===
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     find_package(Qt6 REQUIRED COMPONENTS Widgets)
@@ -51,6 +53,7 @@ find_package(Qt6 REQUIRED COMPONENTS Svg)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         ${GENERATED_RESOURCE_FILES}
+        ${QM_FILES}
         Models/SStyleComponents.h
         Controllers/Components/EStyleObjects.h
         Controllers/StyleController.h Controllers/StyleController.cpp
@@ -63,6 +66,9 @@ find_package(Qt6 REQUIRED COMPONENTS Svg)
         Resources/Styles/Style_CheckBox.qss
         Resources/Styles/Style_DataGridView.qss
         Views/About.h Views/About.cpp Views/About.ui
+
+        pch.h
+        config.ini
     )
     qt_finalize_executable(TrimSheet_ToolsV2)
 else()
@@ -77,8 +83,11 @@ else()
             ${GENERATED_RESOURCE_FILES}
         )
     endif()
-    qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+    qt_add_translation(QM_FILES ${TS_FILES})
 endif()
+
+# === Pre Compile Header
+target_precompile_headers(TrimSheet_ToolsV2 PRIVATE pch.h)
 
 # === Link com bibliotecas Qt ===
 target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
@@ -98,6 +107,7 @@ endforeach()
 list(REMOVE_DUPLICATES INCLUDE_DIRS)
 
 target_include_directories(TrimSheet_ToolsV2 PRIVATE
+    ${CMAKE_SOURCE_DIR}
     ${CMAKE_SOURCE_DIR}/Models
     ${INCLUDE_DIRS}
 )
@@ -114,6 +124,9 @@ set_target_properties(TrimSheet_ToolsV2 PROPERTIES
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
+
+# === Add config.ini in Build ===
+configure_file(${CMAKE_SOURCE_DIR}/config.ini ${CMAKE_BINARY_DIR}/config.ini COPYONLY)
 
 # === Instalação ===
 include(GNUInstallDirs)

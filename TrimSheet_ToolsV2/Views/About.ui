@@ -29,7 +29,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string notr="true">About</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
@@ -114,7 +114,7 @@
             </size>
            </property>
            <property name="text">
-            <string/>
+            <string notr="true"/>
            </property>
            <property name="pixmap">
             <pixmap resource="../Resources/resources.qrc">:/Images/Logo_200x50.png</pixmap>
@@ -158,7 +158,7 @@
 }</string>
              </property>
              <property name="text">
-              <string>TrimSheet Tools</string>
+              <string notr="true">TrimSheet Tools</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -183,7 +183,7 @@
 }</string>
              </property>
              <property name="text">
-              <string>Version 0.1.0 (Build July 2025)</string>
+              <string notr="true">Version 0.1.0 (Build July 2025)</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
@@ -231,7 +231,7 @@
 }</string>
         </property>
         <property name="text">
-         <string>Copyright © 2025 João Felipe Abrahan. Licensed under GNU GPL v3.
+         <string notr="true">Copyright © 2025 João Felipe Abrahan. Licensed under GNU GPL v3.
 All rights reserved under free software terms.</string>
         </property>
         <property name="alignment">
@@ -286,7 +286,7 @@ All rights reserved under free software terms.</string>
 }</string>
             </property>
             <property name="text">
-             <string>For more information about TrimSheet Tools and its versions, please visit the github page:</string>
+             <string notr="true">For more information about TrimSheet Tools and its versions, please visit the github page:</string>
             </property>
            </widget>
           </item>
@@ -312,7 +312,7 @@ QLabel::link:hover {
 }</string>
             </property>
             <property name="text">
-             <string>&lt;a style='color:#645ac8' href=&quot;https://github.com/JoaoFAbrahan/TrimSheet_ToolsV2.git&quot;&gt;https://github.com/JoaoFAbrahan/TrimSheet_ToolsV2.git&lt;/a&gt;</string>
+             <string notr="true">&lt;a style='color:#645ac8' href=&quot;https://github.com/JoaoFAbrahan/TrimSheet_ToolsV2.git&quot;&gt;https://github.com/JoaoFAbrahan/TrimSheet_ToolsV2.git&lt;/a&gt;</string>
             </property>
             <property name="textFormat">
              <enum>Qt::TextFormat::RichText</enum>
@@ -341,7 +341,7 @@ QLabel::link:hover {
 }</string>
             </property>
             <property name="text">
-             <string>For licensing informations, please visit </string>
+             <string notr="true">For licensing informations, please visit </string>
             </property>
            </widget>
           </item>
@@ -361,7 +361,7 @@ QLabel::link {
 }</string>
             </property>
             <property name="text">
-             <string>&lt;a style='color:#645ac8' href=&quot;https://www.gnu.org/licenses/gpl-3.0.html&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.html&lt;/a&gt;</string>
+             <string notr="true">&lt;a style='color:#645ac8' href=&quot;https://www.gnu.org/licenses/gpl-3.0.html&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.html&lt;/a&gt;</string>
             </property>
             <property name="textFormat">
              <enum>Qt::TextFormat::RichText</enum>
@@ -385,7 +385,7 @@ QLabel::link {
 }</string>
           </property>
           <property name="text">
-           <string>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</string>
+           <string notr="true">This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</string>
           </property>
           <property name="textFormat">
            <enum>Qt::TextFormat::PlainText</enum>

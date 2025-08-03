@@ -1,5 +1,6 @@
 #include "WinMain.h"
 #include "./ui_WinMain.h"
+#include "pch.h"
 
 namespace View {
 WinMain::WinMain(QWidget *parent)
@@ -29,7 +30,6 @@ WinMain::~WinMain()
 void WinMain::Init()
 {
     // Set Style
-    _styleControllerComponent.DarkThemeStatus(_isDarktheme);
     StartLabels();
     StartStyleTheme();
     StartIcons();
@@ -72,25 +72,25 @@ void WinMain::SetMenuButtonsGroups()
 void WinMain::StartStyleTheme()
 {
     // Form
-    _styleControllerComponent.ApplyStyle(this, Controller::WindowBackground);
+    Controller::StyleController::Instance().ApplyStyle(this, Controller::WindowBackground);
 
     // Panels
-    _styleControllerComponent.ApplyStyle(ui->MainMenu_Panel_Undocked, Controller::MainMenuPanel);
-    _styleControllerComponent.ApplyStyle(ui->MainMenu_Panel_Docked, Controller::MainMenuPanel);
+    Controller::StyleController::Instance().ApplyStyle(ui->MainMenu_Panel_Undocked, Controller::MainMenuPanel);
+    Controller::StyleController::Instance().ApplyStyle(ui->MainMenu_Panel_Docked, Controller::MainMenuPanel);
 
     // Menu Buttons Style
-    _styleControllerComponent.ApplyStyle(ui->menu_Btn, Controller::MenuDockButton);
-    _styleControllerComponent.ApplyStyle(ui->menu_Btn_2, Controller::MenuDockButton);
-    _styleControllerComponent.ApplyStyle(ui->trimPlanning_Btn, Controller::MenuButton);
-    _styleControllerComponent.ApplyStyle(ui->trimPlanning_DockBtn, Controller::MenuButton);
-    _styleControllerComponent.ApplyStyle(ui->uvCalculate_Btn, Controller::MenuButton);
-    _styleControllerComponent.ApplyStyle(ui->uvCalculate_DockBtn, Controller::MenuButton);
-    _styleControllerComponent.ApplyStyle(ui->helpInfo_Btn, Controller::MenuButton);
-    _styleControllerComponent.ApplyStyle(ui->helpInfo_DockBtn, Controller::MenuButton);
-    _styleControllerComponent.ApplyStyle(ui->settings_Btn, Controller::MenuButton);
-    _styleControllerComponent.ApplyStyle(ui->settings_DockBtn, Controller::MenuButton);
-    _styleControllerComponent.ApplyStyle(ui->about_Btn, Controller::MenuButton);
-    _styleControllerComponent.ApplyStyle(ui->about_DockBtn, Controller::MenuButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->menu_Btn, Controller::MenuDockButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->menu_Btn_2, Controller::MenuDockButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->trimPlanning_Btn, Controller::MenuButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->trimPlanning_DockBtn, Controller::MenuButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->uvCalculate_Btn, Controller::MenuButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->uvCalculate_DockBtn, Controller::MenuButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->helpInfo_Btn, Controller::MenuButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->helpInfo_DockBtn, Controller::MenuButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->settings_Btn, Controller::MenuButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->settings_DockBtn, Controller::MenuButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->about_Btn, Controller::MenuButton);
+    Controller::StyleController::Instance().ApplyStyle(ui->about_DockBtn, Controller::MenuButton);
 
     // Toggle Switch Button
     ui->alwaysOnTop_Chk->SetColor(QColor(84, 65, 246),QColor(15, 16, 17),QColor(245, 245, 245),QColor(245, 245, 245));
@@ -99,12 +99,12 @@ void WinMain::StartStyleTheme()
     connect(ui->alwaysOnTop_DockChk, &View::ToggleSwitch::toggled, ui->alwaysOnTop_Chk, &View::ToggleSwitch::setChecked);
 
     // Set Label
-    _styleControllerComponent.ApplyStyle(ui->alwaysOnTop_Label, Controller::NormalLabel);
+    Controller::StyleController::Instance().ApplyStyle(ui->alwaysOnTop_Label, Controller::NormalLabel);
 }
 void WinMain::StartIcons()
 {
     // Menu Buttons Icons
-    if(_isDarktheme)
+    if(Controller::StyleController::Instance().GetThemeStatus())
     {
         // Dock Button
         ui->menu_Btn->SetStateIcons(
@@ -327,12 +327,12 @@ void WinMain::StartIcons()
 }
 void WinMain::StartLabels()
 {
-    ui->trimPlanning_Btn->setText("  " + tr("Trim Planning"));
-    ui->uvCalculate_Btn->setText("  " + tr("UV Calculate"));
-    ui->helpInfo_Btn->setText("  " + tr("Help Inform"));
-    ui->settings_Btn->setText("  " + tr("Settings"));
-    ui->about_Btn->setText("  " + tr("About"));
-    ui->alwaysOnTop_Label->setText("  " + tr("Always on Top"));
+    ui->trimPlanning_Btn->setText(" " + tr("Trim Planning"));
+    ui->uvCalculate_Btn->setText(" " + tr("UV Calculate"));
+    ui->helpInfo_Btn->setText(" " + tr("Help Inform"));
+    ui->settings_Btn->setText(" " + tr("Settings"));
+    ui->about_Btn->setText(" " + tr("About"));
+    ui->alwaysOnTop_Label->setText(" " + tr("Always on Top"));
 }
 
 

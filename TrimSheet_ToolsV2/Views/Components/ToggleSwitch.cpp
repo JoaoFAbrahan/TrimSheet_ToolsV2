@@ -1,4 +1,5 @@
 #include "ToggleSwitch.h"
+#include "pch.h"
 
 namespace View {
 ToggleSwitch::ToggleSwitch(QWidget *parent, int trackRadius, int thumbRadius) : QAbstractButton(parent), _trackRadius(trackRadius), _thumbRadius(thumbRadius)

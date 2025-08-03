@@ -36,7 +36,7 @@ QPushButton {
 
     /* Font Button */
     color: #f5f5f5;
-    font-family: 'MollenNarrow_Bold';
+    font-family: 'MollenNarrow_Bold', 'NotoSansSC_Bold';
     font-size: 10pt;
     font-weight: bold;
     text-align: center;

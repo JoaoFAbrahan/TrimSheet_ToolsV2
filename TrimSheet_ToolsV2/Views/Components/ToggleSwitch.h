@@ -1,16 +1,11 @@
 #ifndef TOGGLESWITCH_H
 #define TOGGLESWITCH_H
 
-#include <QAbstractButton>
-#include <QBrush>
+#include <QWidget>
 #include <QColor>
 #include <QMap>
 #include <QPropertyAnimation>
-#include <QWidget>
-#include <QPainter>
-#include <QStyleOption>
 #include <QMouseEvent>
-#include <QFont>
 
 namespace View {
 class ToggleSwitch : public QAbstractButton
