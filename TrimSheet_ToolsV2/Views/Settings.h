@@ -44,7 +44,6 @@ private slots:
 private:
     Ui::Settings *ui;
     void applySettings();
-    void SetMessageBoxStyle(QMessageBox *msgBoxRef);
 
 
     // IStartComponent interface

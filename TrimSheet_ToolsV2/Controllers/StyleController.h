@@ -15,8 +15,8 @@ class StyleController
     // Class variables
 private:
     static bool _isDarkTheme;
-    QVector<QString> _darkThemes;
-    QVector<QString> _lightThemes;
+    static QVector<QString> _darkThemes;
+    static QVector<QString> _lightThemes;
     SStyleComponents _styles;
 
 
@@ -35,6 +35,7 @@ public:
     void DarkThemeStatus(bool status);
     bool GetThemeStatus();
     void ApplyStyle(QWidget *objRef, EStyleObjects objTypeRef);
+    void ApplyMessageBoxStyle(QMessageBox *msgBoxRef);
 
 private:
     void LoadThemesFromQSS();

@@ -13,6 +13,8 @@ WinMain::WinMain(QWidget *parent)
     this->setWindowIcon(QIcon(":/Icons/Icon.ico"));
     ui->MainMenu_Panel_Undocked->setVisible(true);
     ui->MainMenu_Panel_Docked->setVisible(false);
+    _settingsForm = new Settings(this);
+    _aboutForm = new About(this);
 
     // Connect Events
     connect(ui->trimPlanning_DockBtn, &QPushButton::clicked, this, &WinMain::on_trimPlanning_Btn_clicked);
@@ -366,16 +368,12 @@ void WinMain::on_helpInfo_Btn_clicked()
 
 void WinMain::on_settings_Btn_clicked()
 {
-    _settingsForm = new Settings(this);
-
     _settingsForm->Init();
     _settingsForm->exec();
 }
 
 void WinMain::on_about_Btn_clicked()
 {
-    _aboutForm = new About(this);
-
     _aboutForm->Init();
     _aboutForm->exec();
 }

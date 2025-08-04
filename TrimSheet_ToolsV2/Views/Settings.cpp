@@ -35,7 +35,7 @@ void Settings::StartStyleTheme()
     Controller::StyleController::Instance().ApplyStyle(this, Controller::WindowBackground);
 
     // Labels
-    Controller::StyleController::Instance().ApplyStyle(ui->themeTitle_Label, Controller::NormalLabel);
+    Controller::StyleController::Instance().ApplyStyle(ui->themeTitle_Label, Controller::TitleLabel);
     Controller::StyleController::Instance().ApplyStyle(ui->languageTitle_Label, Controller::TitleLabel);
 
     // ComboBox
@@ -60,97 +60,6 @@ void Settings::StartLabels()
     okButton->setText(tr("Apply"));
     cancelButton->setText(tr("Cancel"));
 }
-void Settings::SetMessageBoxStyle(QMessageBox *msgBoxRef)
-{
-    if(Controller::StyleController::Instance().GetThemeStatus())
-    {
-        //Apply Dark Style
-        msgBoxRef->setStyleSheet(R"(
-        QDialog  {
-            background-color: #0f1011;
-
-            /* Font Button */
-            color: #f5f5f5;
-            font-family: 'MollenNarrow_Regular';
-            font-size: 8pt;
-            text-align: left;
-        }
-
-        /* Buttons */
-        QPushButton {
-            /* Shape Button */
-            background-color: #645ac8;
-
-            /* Font Button */
-            color: #f5f5f5;
-            font-family: 'MollenNarrow_Bold';
-            font-size: 10pt;
-            font-weight: bold;
-            text-align: center;
-
-            /* Icon Button */
-            qproperty-iconSize: 30px 30px;
-        }
-
-        QPushButton:hover {
-            background-color: #69b5ff;
-        }
-
-        QPushButton:pressed {
-            background-color: #5441F6;
-        }
-
-        QPushButton:disabled {
-            color: #333333;
-            background-color: #f8f8f8;
-        }
-        )");
-    }
-    else
-    {
-        //Apply Light Style
-        msgBoxRef->setStyleSheet(R"(
-        QDialog  {
-            background-color: #e8eaec;
-
-            /* Font Button */
-            color: #0a142a;
-            font-family: 'MollenNarrow_Regular';
-            font-size: 8pt;
-            text-align: left;
-        }
-
-        /* Buttons */
-        QPushButton {
-            /* Shape Button */
-            background-color: #645ac8;
-
-            /* Font Button */
-            color: #f5f5f5;
-            font-family: 'MollenNarrow_Bold';
-            font-size: 10pt;
-            font-weight: bold;
-            text-align: center;
-
-            /* Icon Button */
-            qproperty-iconSize: 30px 30px;
-        }
-
-        QPushButton:hover {
-            background-color: #69b5ff;
-        }
-
-        QPushButton:pressed {
-            background-color: #5441F6;
-        }
-
-        QPushButton:disabled {
-            color: #333333;
-            background-color: #f8f8f8;
-        }
-        )");
-    }
-}
 
 void Settings::applySettings()
 {
@@ -162,6 +71,7 @@ void Settings::applySettings()
 void Settings::on_buttonBox_accepted()
 {
     QMessageBox msgBox(this);
+
     msgBox.setWindowTitle(tr("Restart Required"));
     msgBox.setText(tr("You need to restart the program to apply the settings. Do you want to restart the software?"));
     msgBox.setIcon(QMessageBox::Warning);
@@ -170,7 +80,7 @@ void Settings::on_buttonBox_accepted()
     msgBox.setDefaultButton(QMessageBox::Ok);
 
     // Apply Style
-    SetMessageBoxStyle(&msgBox);
+    Controller::StyleController::Instance().ApplyMessageBoxStyle(&msgBox);
 
     int ret = msgBox.exec();
 

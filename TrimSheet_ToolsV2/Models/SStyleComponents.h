@@ -7,10 +7,10 @@ namespace Model {
 struct SStyleComponents {
     QString WindowBackground = ":/Styles/Style_WindowBackground.qss";
     QString MainMenuPanel = ":/Styles/Style_MainMenuPanel.qss";
-    QString ContainerPanels = ":/Styles/Style_ContainerPanels.qss";
+    QString ContainerPanel = ":/Styles/Style_ContainerPanels.qss";
     QString MenuDockButton = ":/Styles/Style_MenuDockButton.qss";
-    QString MenuButtons = ":/Styles/Style_MainMenu_Button.qss";
-    QString Buttons = ":/Styles/Style_NormalMenu_Button.qss";
+    QString MenuButton = ":/Styles/Style_MainMenu_Button.qss";
+    QString NormalButton = ":/Styles/Style_NormalMenu_Button.qss";
     QString ComboBox = ":/Styles/Style_ComboBox.qss";
     QString CheckBox = ":/Styles/Style_CheckBox.qss";
     QString TextBox = ":/Styles/Style_TextBox.qss";

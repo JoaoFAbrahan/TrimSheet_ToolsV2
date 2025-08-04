@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     QString language = settings.value("General/Language", "English").toString();
 
     // === Aplicar Tema ===
-    theme = "Light";
+    theme = "Dark";
     Controller::StyleController::Instance().DarkThemeStatus(theme.compare("Dark", Qt::CaseInsensitive) == 0);
 
     // === Carregar Tradução ===
