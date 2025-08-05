@@ -24,6 +24,10 @@ void Settings::Init()
     StartStyleTheme();
     StartIcons();
 
+    // Initialize
+    ui->language_ComboBox->setCurrentIndex(static_cast<int>(Controller::InitiallizationConfig::Instance().GetLanguage()));
+    ui->theme_ComboBox->setCurrentIndex(static_cast<int>(Controller::InitiallizationConfig::Instance().GetTheme()));
+
     this->update();
     qApp->processEvents();
 }
@@ -63,7 +67,17 @@ void Settings::StartLabels()
 
 void Settings::applySettings()
 {
+    // Set new settings
+    QString configPath = QCoreApplication::applicationDirPath() + "/config.ini";
+    QSettings settings(configPath, QSettings::IniFormat);
 
+    settings.setValue("Theme", ui->theme_ComboBox->currentIndex());
+    settings.setValue("Language", ui->language_ComboBox->currentIndex());
+
+    // Restart the application
+    QString exePath = QCoreApplication::applicationFilePath();
+    QProcess::startDetached(exePath);
+    QCoreApplication::quit();
 }
 
 
@@ -94,7 +108,5 @@ void Settings::on_buttonBox_accepted()
 }
 
 void Settings::on_buttonBox_rejected()
-{
-
-}
+{}
 }

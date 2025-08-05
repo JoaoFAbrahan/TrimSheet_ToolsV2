@@ -26,6 +26,7 @@ private:
     StyleController(const StyleController&) = delete;            // Impede cópia
     StyleController& operator=(const StyleController&) = delete;
 
+    // Constructor
 public:
     static StyleController& Instance(); // Acesso ao Singleton
 

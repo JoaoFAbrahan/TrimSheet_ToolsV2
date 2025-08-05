@@ -69,6 +69,8 @@ find_package(Qt6 REQUIRED COMPONENTS Svg)
 
         pch.h
         config.ini
+        Controllers/InitiallizationConfig.h Controllers/InitiallizationConfig.cpp
+        Controllers/Components/ELanguages.h
     )
     qt_finalize_executable(TrimSheet_ToolsV2)
 else()

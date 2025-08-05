@@ -5,9 +5,12 @@
 #include <QDialog>
 #include <QMessageBox>
 #include <QTranslator>
+#include <QProcess>
 #include <StyleController.h>
 #include <EStyleObjects.h>
 #include <IStartComponent.h>
+#include <InitiallizationConfig.h>
+#include <ELanguages.h>
 
 using namespace Controller;
 

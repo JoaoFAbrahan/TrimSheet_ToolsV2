@@ -1,0 +1,12 @@
+#ifndef ELANGUAGES_H
+#define ELANGUAGES_H
+
+namespace Controller {
+enum ELanguages {
+    English = 0,
+    Portuguese,
+    Spanish,
+    Chinese
+};
+}
+#endif // ELANGUAGES_H

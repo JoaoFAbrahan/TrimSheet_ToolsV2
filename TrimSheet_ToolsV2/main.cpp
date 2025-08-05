@@ -2,11 +2,12 @@
 
 #include <QApplication>
 #include <QTranslator>
-#include <QLocale>
 #include <QSettings>
 #include <QDir>
 
 #include "StyleController.h"
+#include "InitiallizationConfig.h"
+#include "ELanguages.h"
 
 
 int main(int argc, char *argv[])
@@ -16,30 +17,29 @@ int main(int argc, char *argv[])
     // === Leitura do arquivo config.ini ===
     QString configPath = QCoreApplication::applicationDirPath() + "/config.ini";
     QSettings settings(configPath, QSettings::IniFormat);
-    QString theme = settings.value("General/Theme", "Dark").toString();
-    QString language = settings.value("General/Language", "English").toString();
+
+    Controller::InitiallizationConfig::Instance().SetTheme(settings.value("Theme", 1).toBool());
+    Controller::InitiallizationConfig::Instance().SetLanguage(static_cast<Controller::ELanguages>(settings.value("Language", 0).toInt()));
 
     // === Aplicar Tema ===
-    theme = "Dark";
-    Controller::StyleController::Instance().DarkThemeStatus(theme.compare("Dark", Qt::CaseInsensitive) == 0);
+    Controller::StyleController::Instance().DarkThemeStatus(Controller::InitiallizationConfig::Instance().GetTheme());
+    //Controller::StyleController::Instance().DarkThemeStatus(theme.compare("Dark", Qt::CaseInsensitive) == 0);
 
     // === Carregar Tradução ===
     QTranslator translator;
     QString translationFile;
-    language = "Spanish";
 
-    QMap<QString, QString> translationMap = {
-        { "Portuguese", ":/Translations/TrimSheet_ToolsV2_pt_BR.qm" },
-        { "Spanish",    ":/Translations/TrimSheet_ToolsV2_es_ES.qm" },
-        { "Chinese",    ":/Translations/TrimSheet_ToolsV2_zh_CN.qm" }
+    QMap<Controller::ELanguages, QString> translationMap = {
+        { Controller::ELanguages::Portuguese, ":/Translations/TrimSheet_ToolsV2_pt_BR.qm" },
+        { Controller::ELanguages::Spanish,    ":/Translations/TrimSheet_ToolsV2_es_ES.qm" },
+        { Controller::ELanguages::Chinese,    ":/Translations/TrimSheet_ToolsV2_zh_CN.qm" }
     };
 
-    translationFile = translationMap.value(language, ""); // "" se for "English" (padrão)
+    translationFile = translationMap.value(Controller::InitiallizationConfig::Instance().GetLanguage(), "");
     if (!translationFile.isEmpty()) {
         translator.load(translationFile);
         a.installTranslator(&translator);
     }
-
 
     // === Start the Main Window ===
     View::WinMain w;
