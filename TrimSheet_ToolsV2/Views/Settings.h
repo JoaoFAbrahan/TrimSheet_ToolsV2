@@ -2,6 +2,9 @@
 #define SETTINGS_H
 
 #include <QWidget>
+/*
+    Settings form containing the system for writing values to the config.ini file.
+*/
 #include <QDialog>
 #include <QMessageBox>
 #include <QTranslator>
@@ -9,7 +12,7 @@
 #include <StyleController.h>
 #include <EStyleObjects.h>
 #include <IStartComponent.h>
-#include <InitiallizationConfig.h>
+#include <InitializationConfig.h>
 #include <ELanguages.h>
 
 using namespace Controller;
@@ -27,7 +30,6 @@ class Settings : public QDialog, public IStartComponent
 
     // Class Variables
 private:
-    // Style Theme and UI Components
 
 
     // Constructor

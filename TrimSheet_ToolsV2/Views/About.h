@@ -1,3 +1,6 @@
+/*
+    About form containing all information about the software such as version, licensing, and GitHub repository.
+*/
 #ifndef ABOUT_H
 #define ABOUT_H
 
@@ -6,6 +9,7 @@
 #include <StyleController.h>
 #include <EStyleObjects.h>
 #include <IStartComponent.h>
+#include <InitializationConfig.h>
 
 using namespace Controller;
 
@@ -22,7 +26,6 @@ class About : public QDialog, public IStartComponent
 
     // Class Variables
 private:
-    // Style Theme and UI Components
 
 
     // Constructor

@@ -11,7 +11,7 @@ ToggleSwitch::ToggleSwitch(QWidget *parent, int trackRadius, int thumbRadius) : 
     _baseOffset = std::max(_thumbRadius, _trackRadius);
     _offset = _baseOffset;
 
-    // Conecta o sinal toggled para animar o offset
+    // Connect tge signals for offset animation
     connect(this, &ToggleSwitch::toggled, this, [this](bool checked) {
         QPropertyAnimation* anim = new QPropertyAnimation(this, "offset", this);
         anim->setDuration(120);
@@ -21,8 +21,11 @@ ToggleSwitch::ToggleSwitch(QWidget *parent, int trackRadius, int thumbRadius) : 
     });
 }
 
+
+//  Methods
 void ToggleSwitch::SetColor(QColor trackColorON, QColor trackColorOFF, QColor thumbColorON, QColor thumbColorOFF)
 {
+    // Track outfit styles
     _trackColor[true] = trackColorON;
     _trackColor[false] = trackColorOFF;
 

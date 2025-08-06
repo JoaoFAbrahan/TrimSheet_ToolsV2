@@ -2,9 +2,15 @@
 #include "pch.h"
 
 namespace Controller {
+// Static variables initialization
 bool Controller::StyleController::_isDarkTheme = false;
 QVector<QString> Controller::StyleController::_darkThemes;
 QVector<QString> Controller::StyleController::_lightThemes;
+
+StyleController::StyleController()
+{
+    LoadThemesFromQSS();
+}
 
 StyleController& StyleController::Instance()
 {
@@ -12,11 +18,8 @@ StyleController& StyleController::Instance()
     return instance;
 }
 
-StyleController::StyleController()
-{
-    LoadThemesFromQSS();
-}
 
+// Methods
 void StyleController::DarkThemeStatus(bool status)
 {
     this->_isDarkTheme = status;
@@ -29,6 +32,7 @@ bool StyleController::GetThemeStatus()
 
 void StyleController::ApplyStyle(QWidget *objRef, EStyleObjects objTypeRef)
 {
+    // Check the theme and apply style
     const QVector<QString>& theme = _isDarkTheme ? _darkThemes : _lightThemes;
 
     if (objTypeRef >= 0 && objTypeRef < theme.size())
@@ -37,6 +41,7 @@ void StyleController::ApplyStyle(QWidget *objRef, EStyleObjects objTypeRef)
 
 void StyleController::ApplyMessageBoxStyle(QMessageBox *msgBoxRef)
 {
+    // MessageBox style configuration
     if(_isDarkTheme)
     {
         //Apply Dark Style

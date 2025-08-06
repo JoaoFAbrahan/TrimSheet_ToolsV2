@@ -25,12 +25,13 @@ void Settings::Init()
     StartIcons();
 
     // Initialize
-    ui->language_ComboBox->setCurrentIndex(static_cast<int>(Controller::InitiallizationConfig::Instance().GetLanguage()));
-    ui->theme_ComboBox->setCurrentIndex(static_cast<int>(Controller::InitiallizationConfig::Instance().GetTheme()));
+    ui->language_ComboBox->setCurrentIndex(static_cast<int>(Controller::InitializationConfig::Instance().GetLanguage()));
+    ui->theme_ComboBox->setCurrentIndex(static_cast<int>(Controller::InitializationConfig::Instance().GetTheme()));
 
     this->update();
     qApp->processEvents();
 }
+
 
 // Methods
 void Settings::StartStyleTheme()
@@ -49,8 +50,7 @@ void Settings::StartStyleTheme()
     // Buttons
     Controller::StyleController::Instance().ApplyStyle(ui->buttonBox, Controller::NormalButton);
 }
-void Settings::StartIcons()
-{}
+void Settings::StartIcons() {}
 void Settings::StartLabels()
 {
     // Labels
@@ -84,6 +84,7 @@ void Settings::applySettings()
 // Event Methods
 void Settings::on_buttonBox_accepted()
 {
+    // Create a MessageBox
     QMessageBox msgBox(this);
 
     msgBox.setWindowTitle(tr("Restart Required"));
@@ -107,6 +108,5 @@ void Settings::on_buttonBox_accepted()
     }
 }
 
-void Settings::on_buttonBox_rejected()
-{}
+void Settings::on_buttonBox_rejected() {}
 }

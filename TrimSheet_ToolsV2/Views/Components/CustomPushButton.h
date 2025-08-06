@@ -1,3 +1,6 @@
+/*
+    My custom PushButton Widget
+*/
 #ifndef CUSTOMPUSHBUTTON_H
 #define CUSTOMPUSHBUTTON_H
 
@@ -11,7 +14,7 @@ class CustomPushButton : public QPushButton
 {
     Q_OBJECT
 
-    // Class variables
+    // Class Variables
 private:
     QIcon _icon;
 

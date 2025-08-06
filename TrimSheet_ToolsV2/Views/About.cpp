@@ -12,6 +12,7 @@ About::About(QWidget *parent)
     // Initialize
     this->setWindowIcon(QIcon(":/Icons/About.ico"));
     this->setWindowTitle(tr("About"));
+    ui->version_Label->setText("Version " + Controller::InitializationConfig::Instance().GetVersion());
 }
 
 About::~About()
@@ -28,6 +29,8 @@ void About::Init()
     qApp->processEvents();
 }
 
+
+// Methods
 void About::StartStyleTheme()
 {
     // Form
@@ -44,8 +47,7 @@ void About::StartStyleTheme()
     Controller::StyleController::Instance().ApplyStyle(ui->licensingInfo_Label, Controller::NormalLabel);
     Controller::StyleController::Instance().ApplyStyle(ui->softwareInfo_Label, Controller::NormalLabel);
 }
-void About::StartIcons()
-{}
+void About::StartIcons() {}
 void About::StartLabels()
 {
     // Set Labels

@@ -1,3 +1,9 @@
+/*
+    Struct responsible for holding the paths of the .qss files associated with the object types for the StyleController system
+    Associated files:
+    - Controllers/StyleController
+    - Controllers/Components/EStyleObjects
+*/
 #ifndef SSTYLECOMPONENTS_H
 #define SSTYLECOMPONENTS_H
 

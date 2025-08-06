@@ -50,6 +50,7 @@ void WinMain::Init()
 
 }
 
+
 // Methods
 void WinMain::SetMenuButtonsGroups()
 {

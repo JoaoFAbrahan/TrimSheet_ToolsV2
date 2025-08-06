@@ -1,3 +1,6 @@
+/*
+    This interface is responsible for the style application systems on the forms.
+*/
 #ifndef ISTARTCOMPONENT_H
 #define ISTARTCOMPONENT_H
 

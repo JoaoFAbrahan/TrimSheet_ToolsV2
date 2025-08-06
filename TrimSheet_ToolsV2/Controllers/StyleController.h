@@ -1,3 +1,9 @@
+/*
+    This class manages the control and application of .qss StyleSheet components
+    Associated files:
+    - Controllers/Components/EStyleObjects
+    - Models/SStyleComponents
+*/
 #ifndef STYLECONTROLLER_H
 #define STYLECONTROLLER_H
 
@@ -12,7 +18,7 @@ using namespace Model;
 namespace Controller {
 class StyleController
 {
-    // Class variables
+    // Class Variables
 private:
     static bool _isDarkTheme;
     static QVector<QString> _darkThemes;
@@ -22,13 +28,13 @@ private:
 
     // Singleton Pattern
 private:
-    StyleController(); // Construtor privado
-    StyleController(const StyleController&) = delete;            // Impede cópia
+    StyleController();
+    StyleController(const StyleController&) = delete;
     StyleController& operator=(const StyleController&) = delete;
 
     // Constructor
 public:
-    static StyleController& Instance(); // Acesso ao Singleton
+    static StyleController& Instance();
 
 
     // Methods

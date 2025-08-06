@@ -1,3 +1,6 @@
+/*
+    Application EntryPoint
+*/
 #include "Views/WinMain.h"
 
 #include <QApplication>
@@ -5,27 +8,30 @@
 #include <QSettings>
 #include <QDir>
 
-#include "StyleController.h"
-#include "InitiallizationConfig.h"
-#include "ELanguages.h"
+#include <StyleController.h>
+#include <InitializationConfig.h>
+#include <ELanguages.h>
 
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    // === Leitura do arquivo config.ini ===
+    // === Read the config.ini file ===
     QString configPath = QCoreApplication::applicationDirPath() + "/config.ini";
     QSettings settings(configPath, QSettings::IniFormat);
 
-    Controller::InitiallizationConfig::Instance().SetTheme(settings.value("Theme", 1).toBool());
-    Controller::InitiallizationConfig::Instance().SetLanguage(static_cast<Controller::ELanguages>(settings.value("Language", 0).toInt()));
+    Controller::InitializationConfig::Instance().SetTheme(settings.value("Theme", 1).toBool());
+    Controller::InitializationConfig::Instance().SetLanguage(static_cast<Controller::ELanguages>(settings.value("Language", 0).toInt()));
 
-    // === Aplicar Tema ===
-    Controller::StyleController::Instance().DarkThemeStatus(Controller::InitiallizationConfig::Instance().GetTheme());
-    //Controller::StyleController::Instance().DarkThemeStatus(theme.compare("Dark", Qt::CaseInsensitive) == 0);
+    // === Set Software version ===
+    QString softwareVersion = "0.1.15 (Build July 2025)";   // =====> Version number
+    Controller::InitializationConfig::Instance().SetVersion(softwareVersion);
 
-    // === Carregar Tradução ===
+    // === Set Themes ===
+    Controller::StyleController::Instance().DarkThemeStatus(Controller::InitializationConfig::Instance().GetTheme());
+
+    // === Load and set Translation .qm file ===
     QTranslator translator;
     QString translationFile;
 
@@ -35,7 +41,7 @@ int main(int argc, char *argv[])
         { Controller::ELanguages::Chinese,    ":/Translations/TrimSheet_ToolsV2_zh_CN.qm" }
     };
 
-    translationFile = translationMap.value(Controller::InitiallizationConfig::Instance().GetLanguage(), "");
+    translationFile = translationMap.value(Controller::InitializationConfig::Instance().GetLanguage(), "");
     if (!translationFile.isEmpty()) {
         translator.load(translationFile);
         a.installTranslator(&translator);

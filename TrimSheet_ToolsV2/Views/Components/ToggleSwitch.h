@@ -1,3 +1,6 @@
+/*
+    My custom ToggleSwitch Button Widget
+*/
 #ifndef TOGGLESWITCH_H
 #define TOGGLESWITCH_H
 
@@ -14,7 +17,7 @@ class ToggleSwitch : public QAbstractButton
     Q_PROPERTY(int offset READ offset WRITE setOffset)
     Q_PROPERTY(bool checked READ isChecked WRITE setChecked NOTIFY toggled)
 
-    // Class variables
+    // Class Variables
 private:
     int _trackRadius;
     int _thumbRadius;
@@ -47,6 +50,7 @@ protected:
     void mouseReleaseEvent(QMouseEvent* event) override;
     void enterEvent(QEnterEvent* event) override;
 
+    // Events
 signals:
     void checkStateChanged(bool checked);
     void switchedOn();

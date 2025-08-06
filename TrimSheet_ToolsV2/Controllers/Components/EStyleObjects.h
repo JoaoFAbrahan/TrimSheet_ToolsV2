@@ -1,3 +1,9 @@
+/*
+    Enumeration that holds the list of object types for the StyleController system.
+    Associated files:
+    - Controllers/StyleController
+    - Models/SStyleComponents
+*/
 #ifndef ESTYLEOBJECTS_H
 #define ESTYLEOBJECTS_H
 

@@ -32,10 +32,10 @@ QPixmap CustomPushButton::ColorizeSVG(QString iconPath, QColor iconColor, int ic
     QPainter painter(&pixmap);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    // Primeiro renderiza o SVG
+    // Renderize the SVG
     renderer.render(&painter);
 
-    // Agora aplica a cor com máscara
+    // Apply color
     painter.setCompositionMode(QPainter::CompositionMode_SourceIn);
     painter.fillRect(pixmap.rect(), iconColor);
 

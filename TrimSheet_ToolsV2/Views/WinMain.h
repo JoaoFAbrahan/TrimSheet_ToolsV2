@@ -1,3 +1,12 @@
+/*
+    Main application form containing the main menu for accessing the program's features
+    Associated forms:
+    - View/TrimSettings
+    - View/UVCalculate
+    - View/HelpInfo
+    - View/Settings
+    - View/About
+*/
 #ifndef WINMAIN_H
 #define WINMAIN_H
 
@@ -28,7 +37,7 @@ class WinMain : public QMainWindow, public IStartComponent
 
     // Class Variables
 private:
-    // Style Theme and UI Components
+    // UI Widgets Components
     QButtonGroup _buttonUndockedGroupList;
     QButtonGroup _buttonDockedGroupList;
 
