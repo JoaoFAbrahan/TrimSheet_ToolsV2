@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     Controller::InitializationConfig::Instance().SetLanguage(static_cast<Controller::ELanguages>(settings.value("Language", 0).toInt()));
 
     // === Set Software version ===
-    QString softwareVersion = "0.1.15 (Build July 2025)";   // =====> Version number
+    QString softwareVersion = "0.1.15 (Build August 2025)";   // =====> Version number
     Controller::InitializationConfig::Instance().SetVersion(softwareVersion);
 
     // === Set Themes ===
