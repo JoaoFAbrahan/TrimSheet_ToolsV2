@@ -11,6 +11,7 @@
 #define WINMAIN_H
 
 #include <QMainWindow>
+#include <QWidget>
 #include <QTranslator>
 #include <QButtonGroup>
 #include <CustomPushButton.h>
@@ -18,6 +19,7 @@
 #include <EStyleObjects.h>
 #include <IStartComponent.h>
 
+#include <TrimPlanning.h>
 #include <Settings.h>
 #include <About.h>
 
@@ -42,6 +44,7 @@ private:
     QButtonGroup _buttonDockedGroupList;
 
     // Features
+    TrimPlanning *_trimPlanningForm = nullptr;
     Settings *_settingsForm = nullptr;
     About *_aboutForm = nullptr;
 

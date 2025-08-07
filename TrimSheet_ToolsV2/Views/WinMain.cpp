@@ -15,6 +15,12 @@ WinMain::WinMain(QWidget *parent)
     ui->MainMenu_Panel_Docked->setVisible(false);
     _settingsForm = new Settings(this);
     _aboutForm = new About(this);
+    _trimPlanningForm = new TrimPlanning(this);
+    _trimPlanningForm->Init();
+
+    // Start Form View
+    ui->formView_Panel->addWidget(_trimPlanningForm);
+
 
     // Connect Events
     connect(ui->trimPlanning_DockBtn, &QPushButton::clicked, this, &WinMain::on_trimPlanning_Btn_clicked);
@@ -354,7 +360,7 @@ void WinMain::on_menu_Btn_2_clicked()
 
 void WinMain::on_trimPlanning_Btn_clicked()
 {
-
+    ui->formView_Panel->addWidget(_trimPlanningForm);
 }
 
 void WinMain::on_uvCalculate_Btn_clicked()

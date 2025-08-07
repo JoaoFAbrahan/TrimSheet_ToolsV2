@@ -1,9 +1,11 @@
 /* Dark Theme */
 QWidget {
     background-color: #1a1b1b;
+    border-radius: 5px;
 }
 === Theme ===
 /* Light Theme */
 QWidget {
     background-color: #f8f8f8;
+    border-radius: 5px;
 }

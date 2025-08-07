@@ -48,6 +48,7 @@ qt_add_resources(GENERATED_RESOURCE_FILES
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     find_package(Qt6 REQUIRED COMPONENTS Widgets)
 find_package(Qt6 REQUIRED COMPONENTS Svg)
+find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 
     qt_add_executable(TrimSheet_ToolsV2
         MANUAL_FINALIZATION
@@ -71,6 +72,8 @@ find_package(Qt6 REQUIRED COMPONENTS Svg)
         config.ini
         Controllers/InitializationConfig.h Controllers/InitializationConfig.cpp
         Controllers/Components/ELanguages.h
+        Views/TrimPlanning.h Views/TrimPlanning.cpp Views/TrimPlanning.ui
+        Views/Components/ProportionalContainer.h Views/Components/ProportionalContainer.cpp
     )
     qt_finalize_executable(TrimSheet_ToolsV2)
 else()
@@ -96,6 +99,7 @@ target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt${QT_VERSION_MAJOR}::Core)
 target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt6::Widgets)
 target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt6::Svg)
+target_link_libraries(TrimSheet_ToolsV2 PRIVATE Qt6::Core Qt6::Widgets)
 
 # === Includes ===
 file(GLOB_RECURSE VIEW_HEADER_PATHS "${CMAKE_SOURCE_DIR}/Views/*.h")
